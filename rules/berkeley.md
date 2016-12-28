@@ -1,4 +1,4 @@
-    *from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html)*
+> *from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html)*
 
 # Kriegspiel Rules
 
