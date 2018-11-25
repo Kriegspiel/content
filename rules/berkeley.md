@@ -2,12 +2,11 @@
 
 # Kriegspiel Rules
 
-
 ## I. Introduction:
 
-Kriegspiel is a partially observable variant of chess, in which the players cannot see the pieces or moves of their opponents. Because of this restriction, Kriegspiel cannot be played on a single chessboard; instead, playing in person requires three chessboards and a referee.  Players sit back-to-back with the referee between them. The referee has the official board, upon which an ordinary-looking chess game is being played (at the direction of the players).  Each player has a board with her own pieces in the correct locations, and is free to place her opponents' pieces wherever she likes (this placement, however, has no effect on the outcome of the game). When playing Kriegspiel online, the computer can serve as the referee. 
+Kriegspiel is a partially observable variant of chess, in which the players cannot see the pieces or moves of their opponents. Because of this restriction, Kriegspiel cannot be played on a single chessboard; instead, playing in person requires three chessboards and a referee. Players sit back-to-back with the referee between them. The referee has the official board, upon which an ordinary-looking chess game is being played (at the direction of the players). Each player has a board with her own pieces in the correct locations, and is free to place her opponents' pieces wherever she likes (this placement, however, has no effect on the outcome of the game). When playing Kriegspiel online, the computer can serve as the referee. 
 
-Several regional variants of Kriegspiel exist, which are similar in concept but differ in (primarily) the observation model.  While the rules described here are very similar to some other rule sets, they are not identical to any that we know of.  Thus, to prevent possible confusion, we will call this the "Berkeley" variant of Kriegspiel for the time being; if you know of a pre-existing name for this variant, please e-mail me at jawolfe AT berkeley.edu.
+Several regional variants of Kriegspiel exist, which are similar in concept but differ in (primarily) the observation model. While the rules described here are very similar to some other rule sets, they are not identical to any that we know of. Thus, to prevent possible confusion, we will call this the "Berkeley" variant of Kriegspiel for the time being; if you know of a pre-existing name for this variant, please e-mail me at jawolfe AT berkeley.edu.
 
 ## II. Piece Movement:
 
@@ -17,7 +16,7 @@ Because a potential chess move can be blocked or leave a player in check, its le
 
 ## III. The Referee:
 
-If the referee's announcements were limited to just "Yes" and "No", Kriegspiel wouldn't be a very interesting game (or at least not very enjoyable to play). In fact, the referee also announces several other conditions, which give players more information about the true board state. The variants of Kriegspiel differ primarily in the type of announcements the referee gives.  In the variant described here, *all announcements are heard by both players*; only the true board position and attempted moves are hidden. 
+If the referee's announcements were limited to just "Yes" and "No", Kriegspiel wouldn't be a very interesting game (or at least not very enjoyable to play). In fact, the referee also announces several other conditions, which give players more information about the true board state. The variants of Kriegspiel differ primarily in the type of announcements the referee gives. In the variant described here, *all announcements are heard by both players*; only the true board position and attempted moves are hidden. 
 
 ### A. Legality:
 
@@ -25,7 +24,7 @@ After each attempted move, the referee announces "No" if the move is illegal, or
 
 ### B. Capture:
 
-Once the referee has accepted a move as legal (by saying "Yes"), he makes this move on his board. If the move is a capture, he announces the square of the piece captured to both players (i.e. "Capture at d4"); if no capture has occurred, nothing is announced. The referee does not announce the identity of the captured or capturing piece.  En passant pawn captures are announced as ordinary captures.
+Once the referee has accepted a move as legal (by saying "Yes"), he makes this move on his board. If the move is a capture, he announces the square of the piece captured to both players (i.e. "Capture at d4"); if no capture has occurred, nothing is announced. The referee does not announce the identity of the captured or capturing piece. En passant pawn captures are announced as ordinary captures.
  
 ### C. Check:
 
@@ -61,4 +60,4 @@ In chess, if a player has adequate material against a lone king, she can always 
 
 In fact, all of the above combinations of material can be used to force mate in Kriegspiel with arbitrary certainty. With a rook, queen, or non-edge pawn against a singleton king, a player can mate with probability 1, although this may require an unbounded number of moves (the expected number of moves, however, is bounded). In the other two scenarios (two bishops or bishop and knight), a forced mate can be achieved with probability 1-epsilon; epsilon can be made arbitrarily small, if the player with the advantage is willing to wait arbitrarily long to checkmate. 
 
-For the purpose of the checkmate problems we provide, positions with material forced checkmates (including epsilon checkmates) are considered to be immediate checkmate positions.  To ensure that the opposing king cannot immediately capture the checkmating material, we only declare these positions to be checkmates when the player's king  is protecting said material. For example, if a player can certainly reduce a position to KQvK with her king protecting her queen in one move, this is considered a forced checkmate in one move.
+For the purpose of the checkmate problems we provide, positions with material forced checkmates (including epsilon checkmates) are considered to be immediate checkmate positions. To ensure that the opposing king cannot immediately capture the checkmating material, we only declare these positions to be checkmates when the player's king is protecting said material. For example, if a player can certainly reduce a position to KQvK with her king protecting her queen in one move, this is considered a forced checkmate in one move.
