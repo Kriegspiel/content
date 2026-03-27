@@ -8,6 +8,9 @@ author: "Kriegspiel Team"
 tags: ["rules", "berkeley"]
 draft: false
 version: "1.0.0"
+revision: "rules-berkeley-r1"
+lastReviewedAt: "2026-03-27"
+changelogSlug: "2026-03-27-slice-940-trust-discoverability"
 ---
 > *from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html)*
 
