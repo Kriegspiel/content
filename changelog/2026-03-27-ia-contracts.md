@@ -1,0 +1,12 @@
+---
+title: "Slice 910 foundations locked"
+slug: "2026-03-27-slice-910"
+summary: "IA, route contracts, and content schema baseline published."
+publishedAt: "2026-03-27"
+updatedAt: "2026-03-27"
+author: "Kriegspiel Team"
+tags: ["changelog", "step-900"]
+draft: false
+version: "0.9.10"
+---
+Completed Slice 910 contract baseline.

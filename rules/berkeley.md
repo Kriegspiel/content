@@ -1,3 +1,14 @@
+---
+title: "Berkeley Kriegspiel Rules"
+slug: "berkeley"
+summary: "Berkeley variant ruleset and referee announcement semantics."
+publishedAt: "2026-03-27"
+updatedAt: "2026-03-27"
+author: "Kriegspiel Team"
+tags: ["rules", "berkeley"]
+draft: false
+version: "1.0.0"
+---
 > *from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html)*
 
 # Kriegspiel Rules
