@@ -1,3 +1,14 @@
+---
+title: "Wild 16 Kriegspiel Rules"
+slug: "wild-16"
+summary: "Wild 16 announcement and move validation pattern."
+publishedAt: "2026-03-27"
+updatedAt: "2026-03-27"
+author: "Kriegspiel Team"
+tags: ["rules", "wild-16"]
+draft: false
+version: "1.0.0"
+---
 > *from [ICC Help](https://www.chessclub.com/user/help/Kriegspiel)*
 
 The computer referee makes the following announcements where appropriate:
