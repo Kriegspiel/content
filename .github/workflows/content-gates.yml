@@ -60,16 +60,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: Kriegspiel/ks-home
-          path: ../ks-home
+          path: ks-home
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: ../ks-home/package-lock.json
+          cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
-        working-directory: ../ks-home
+        working-directory: ks-home
       - run: npm run content:trigger:simulate -- --from=../content --verify-static-regen
-        working-directory: ../ks-home
+        working-directory: ks-home
 
   website-sitemap-check:
     name: website-sitemap-check
@@ -80,16 +80,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: Kriegspiel/ks-home
-          path: ../ks-home
+          path: ks-home
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: ../ks-home/package-lock.json
+          cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
-        working-directory: ../ks-home
+        working-directory: ks-home
       - run: npm run sitemap:generate -- --check
-        working-directory: ../ks-home
+        working-directory: ks-home
 
   website-feed-check:
     name: website-feed-check
@@ -100,16 +100,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: Kriegspiel/ks-home
-          path: ../ks-home
+          path: ks-home
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: ../ks-home/package-lock.json
+          cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
-        working-directory: ../ks-home
+        working-directory: ks-home
       - run: npm run feeds:generate -- --check
-        working-directory: ../ks-home
+        working-directory: ks-home
 
   preview-deploy-content-pr:
     name: preview-deploy-content-pr
@@ -127,21 +127,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: Kriegspiel/ks-home
-          path: ../ks-home
+          path: ks-home
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: ../ks-home/package-lock.json
+          cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
-        working-directory: ../ks-home
+        working-directory: ks-home
       - run: npm run build
-        working-directory: ../ks-home
+        working-directory: ks-home
       - id: preview
         run: |
           echo "preview_url=https://preview-content-pr-${{ github.event.pull_request.number }}.kriegspiel.org" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
         with:
           name: content-preview-pr-${{ github.event.pull_request.number }}
-          path: ../ks-home/dist
+          path: ks-home/dist
       - run: echo "Content preview ready at ${{ steps.preview.outputs.preview_url }}"
