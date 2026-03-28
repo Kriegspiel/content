@@ -7,6 +7,7 @@ updatedAt: "2026-03-27"
 author: "Kriegspiel Team"
 tags: ["rules", "wild-16"]
 draft: false
+lifecycle: published
 version: "1.0.0"
 revision: "rules-wild16-r1"
 lastReviewedAt: "2026-03-27"

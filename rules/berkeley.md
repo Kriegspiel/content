@@ -7,6 +7,7 @@ updatedAt: "2026-03-27"
 author: "Kriegspiel Team"
 tags: ["rules", "berkeley"]
 draft: false
+lifecycle: published
 version: "1.0.0"
 revision: "rules-berkeley-r1"
 lastReviewedAt: "2026-03-27"
