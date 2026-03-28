@@ -2,12 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 
 export const REQUIRED = ["title", "slug", "summary", "publishedAt", "updatedAt", "author", "tags", "draft"];
+export const CONTENT_COLLECTIONS = ["blog", "changelog", "rules"];
 
-export function listMarkdown(root = process.cwd()) {
-  return ["blog", "changelog"].flatMap((dir) => {
+export function listMarkdown(root = process.cwd(), collections = CONTENT_COLLECTIONS) {
+  return collections.flatMap((dir) => {
     const full = path.join(root, dir);
     if (!fs.existsSync(full)) return [];
-    return fs.readdirSync(full).filter((f) => f.endsWith(".md") && f.toLowerCase() !== "readme.md").map((file) => ({ dir, file, fullPath: path.join(full, file), raw: fs.readFileSync(path.join(full, file), "utf8") }));
+    return fs.readdirSync(full)
+      .filter((f) => f.endsWith(".md") && f.toLowerCase() !== "readme.md")
+      .map((file) => ({ dir, file, fullPath: path.join(full, file), raw: fs.readFileSync(path.join(full, file), "utf8") }));
   });
 }
 

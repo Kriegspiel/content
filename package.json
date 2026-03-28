@@ -7,6 +7,7 @@
     "lint:markdown": "node scripts/lint-markdown.mjs",
     "lint:links": "node scripts/lint-links.mjs",
     "validate:frontmatter": "node scripts/validate-frontmatter.mjs",
-    "build:content-index": "node scripts/build-content-index.mjs"
+    "build:content-index": "node scripts/build-content-index.mjs",
+    "validate:content-policy": "node scripts/check-content-policy.mjs"
   }
 }

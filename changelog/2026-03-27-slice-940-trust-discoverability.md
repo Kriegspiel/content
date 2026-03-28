@@ -7,6 +7,7 @@ updatedAt: 2026-03-27
 author: Kriegspiel Team
 tags: [changelog, step-900, seo, legal, analytics]
 draft: false
+lifecycle: published
 version: 0.9.40
 ---
 Completed Step 900 Slice 940.
