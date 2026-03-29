@@ -8,28 +8,29 @@ author: "Kriegspiel Team"
 tags: ["site", "footer", "navigation"]
 draft: false
 ---
-# Policy
-- [Privacy](/privacy)
-- [Terms](/terms)
+# Game
+- [Leaderboard](/leaderboard)
+- [Play online](https://app.kriegspiel.org/)
 
 # Rules
 - [Berkeley](/rules/berkeley)
 - [Wild 16](/rules/wild16)
 - [Comparison](/rules/comparison/)
 
-# Communication
+# Comm
 - [Blog](/blog)
 - [Changelog](/changelog)
 - [About](/about)
 
-# Game
-- [Leaderboard](/leaderboard)
-- [Play online](https://app.kriegspiel.org/)
+# Policy
+- [Privacy](/privacy)
+- [Terms](/terms)
 
-# Development
+# Dev
 - [API docs](https://api.kriegspiel.org/docs)
 - [GitHub](https://github.com/Kriegspiel)
 
 # Social
 - [X.com](https://x.com/kriegspiel_org)
 - [GitHub](https://github.com/Kriegspiel)
+- [hi@kriegspiel.org](mailto:hi@kriegspiel.org)
