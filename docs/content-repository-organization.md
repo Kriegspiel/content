@@ -3,10 +3,10 @@
 ## Canonical Layout
 
 ```text
-blog/         published, review, and draft editorial posts
+blog/         published, review, and draft editorial posts (folder entries)
 changelog/    versioned product updates and release notes
 rules/        public rules references consumed by ks-home
-site/         singleton public pages consumed by ks-home (home, privacy, terms)
+site/         singleton public pages consumed by ks-home (folder entries)
 
 docs/         contributor-facing process and policy docs
 scripts/      repository validation/build tooling
@@ -15,11 +15,13 @@ scripts/      repository validation/build tooling
 
 ## Naming Policy
 
-- Filenames must be lowercase kebab-case with a `.md` suffix.
-- `blog/<slug>.md` must match the frontmatter `slug` exactly.
+- Site singleton pages live at `site/<slug>/README.md`.
+- Blog entries live at `blog/YYYY-MM-DD_<slug>/README.md`.
+- `README.md` inside an entry folder is canonical content, not collection documentation.
 - `changelog/<slug>.md` must match the frontmatter `slug` exactly; the slug must start with an ISO date prefix (`YYYY-MM-DD-...`).
 - `rules/<slug>.md` must match the frontmatter `slug` exactly.
-- Collection `README.md` files are allowed only as non-index documentation and are ignored by build loaders.
+- Site folder names must match the frontmatter `slug` exactly.
+- Blog folder suffixes must match the frontmatter `slug` exactly.
 
 ## Lifecycle Policy
 
@@ -48,6 +50,6 @@ The blocking policy gate is `npm run validate:content-policy`.
 It verifies:
 
 - folder architecture exists
-- filename and slug policy
+- entry-folder naming and slug policy
 - lifecycle metadata rules
 - CODEOWNERS coverage for required paths

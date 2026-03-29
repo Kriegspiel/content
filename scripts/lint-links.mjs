@@ -5,7 +5,7 @@ import { listMarkdown } from "./lib.mjs";
 
 const issues = [];
 const pattern = /\[[^\]]+\]\(([^)]+)\)/g;
-for (const doc of listMarkdown()) {
+for (const doc of [...listMarkdown(), ...listMarkdown(process.cwd(), ["site"])]) {
   for (const match of doc.raw.matchAll(pattern)) {
     const href = match[1];
     if (/^https?:\/\//.test(href) || href.startsWith("mailto:")) continue;

@@ -1,7 +1,8 @@
 # Editorial Pipeline (Slice 930)
 
 ## Authoring Conventions
-- Write posts in `blog/*.md` and release entries in `changelog/*.md`.
+- Write blog posts in `blog/YYYY-MM-DD_<slug>/README.md` and release entries in `changelog/*.md`.
+- Store site singleton pages in `site/<slug>/README.md`.
 - Required frontmatter: `title`, `slug`, `summary`, `publishedAt`, `updatedAt`, `author`, `tags`, `draft`.
 - Changelog additionally requires `version`.
 - Keep `draft: true` for preview-only content.

@@ -4,10 +4,11 @@
 
 1. Copy an existing markdown file from the target collection.
 2. Name the file using the collection rule:
-   - `blog/<slug>.md`
+   - `blog/YYYY-MM-DD_<slug>/README.md`
    - `changelog/<yyyy-mm-dd-slug>.md`
    - `rules/<slug>.md`
-3. Set frontmatter fields including `draft` and `lifecycle`.
+   - `site/<slug>/README.md`
+3. Set frontmatter fields including `draft` and `lifecycle` where applicable.
 4. For work in progress, use:
    - `draft: true`
    - `lifecycle: draft`
@@ -37,7 +38,7 @@ npm run build:content-index
 
 ## Archive
 
-1. Keep the file in its canonical collection path.
+1. Keep the entry in its canonical collection path.
 2. Set `lifecycle: archived`.
 3. Keep `draft: false` so historical entries stay buildable and linkable.
 4. Add a short note in the body when archive context matters.
