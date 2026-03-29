@@ -9,4 +9,5 @@ tags: ["website", "announcement"]
 draft: false
 lifecycle: published
 ---
-Initial website-track content contract post.
+
+Hello, world!
