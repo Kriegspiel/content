@@ -1,11 +1,11 @@
 ---
-title: "Wild 16 Kriegspiel Rules"
-slug: "wild-16"
-summary: "Wild 16 announcement and move validation pattern."
+title: "Wild16 Kriegspiel Rules"
+slug: "wild16"
+summary: "Wild16 announcement and move validation pattern used by major online play."
 publishedAt: "2026-03-27"
 updatedAt: "2026-03-27"
 author: "Kriegspiel Team"
-tags: ["rules", "wild-16"]
+tags: ["rules", "wild16", "wild-16"]
 draft: false
 lifecycle: published
 version: "1.0.0"
