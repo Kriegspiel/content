@@ -81,7 +81,7 @@ jobs:
           cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
         working-directory: ks-home
-      - run: npm run content:trigger:simulate -- --from=../content --verify-static-regen
+      - run: npm run content:trigger:simulate -- --from=.. --verify-static-regen
         working-directory: ks-home
 
   website-sitemap-check:
