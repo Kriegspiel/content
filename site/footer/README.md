@@ -17,7 +17,7 @@ draft: false
 - [Wild 16](/rules/wild16)
 - [Comparison](/rules/comparison/)
 
-# Comm
+# Communication
 - [Blog](/blog)
 - [Changelog](/changelog)
 - [About](/about)
@@ -26,7 +26,7 @@ draft: false
 - [Privacy](/privacy)
 - [Terms](/terms)
 
-# Dev
+# Development
 - [API docs](https://api.kriegspiel.org/docs)
 - [GitHub](https://github.com/Kriegspiel)
 
