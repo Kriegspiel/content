@@ -8,7 +8,7 @@ const pattern = /\[[^\]]+\]\(([^)]+)\)/g;
 for (const doc of [...listMarkdown(), ...listMarkdown(process.cwd(), ["site"])]) {
   for (const match of doc.raw.matchAll(pattern)) {
     const href = match[1];
-    if (/^https?:\/\//.test(href) || href.startsWith("mailto:")) continue;
+    if (/^https?:\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("/")) continue;
     const target = path.resolve(path.dirname(doc.fullPath), href);
     if (!fs.existsSync(target)) issues.push(`${doc.dir}/${doc.file}: broken relative link ${href}`);
   }
