@@ -101,7 +101,7 @@ jobs:
           cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
         working-directory: ks-home
-      - run: npm run sitemap:generate -- --check
+      - run: KS_CONTENT_PATH=.. npm run sitemap:generate -- --check
         working-directory: ks-home
 
   website-feed-check:
@@ -121,7 +121,7 @@ jobs:
           cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
         working-directory: ks-home
-      - run: npm run feeds:generate -- --check
+      - run: KS_CONTENT_PATH=.. npm run feeds:generate -- --check
         working-directory: ks-home
 
   preview-deploy-content-pr:
@@ -149,7 +149,7 @@ jobs:
           cache-dependency-path: ks-home/package-lock.json
       - run: npm ci
         working-directory: ks-home
-      - run: npm run build
+      - run: KS_CONTENT_PATH=.. npm run build
         working-directory: ks-home
       - id: preview
         run: |
