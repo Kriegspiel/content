@@ -6,6 +6,7 @@
 blog/         published, review, and draft editorial posts
 changelog/    versioned product updates and release notes
 rules/        public rules references consumed by ks-home
+site/         singleton public pages consumed by ks-home (home, privacy, terms)
 
 docs/         contributor-facing process and policy docs
 scripts/      repository validation/build tooling
@@ -32,6 +33,7 @@ Allowed values for `lifecycle`:
 Additional rules:
 
 - Every content document in `blog/`, `changelog/`, and `rules/` must declare `lifecycle`.
+- `site/` singleton pages do not use lifecycle; they are consumed directly as canonical public pages.
 - `publishedAt` and `updatedAt` must remain valid dates for every lifecycle state.
 - Changelog and rules entries must continue to declare `version`.
 
