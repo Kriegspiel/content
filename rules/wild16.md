@@ -13,8 +13,6 @@ revision: "rules-wild16-r1"
 lastReviewedAt: "2026-03-27"
 changelogSlug: "2026-03-27-slice-940-trust-discoverability"
 ---
-> *from [ICC Help](https://www.chessclub.com/user/help/Kriegspiel)*
-
 The computer referee makes the following announcements where appropriate:
 
 - "White's move" 
@@ -31,3 +29,5 @@ The computer referee makes the following announcements where appropriate:
 When you try an illegal move, you are simply told "Illegal move", whether it is
 moving into check or moving through an enemy piece. Your opponent is not told
 anything when you try an illegal move.
+
+*Taken from [ICC Help](https://www.chessclub.com/user/help/Kriegspiel).*

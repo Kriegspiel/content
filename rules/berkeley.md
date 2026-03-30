@@ -13,10 +13,6 @@ revision: "rules-berkeley-r1"
 lastReviewedAt: "2026-03-27"
 changelogSlug: "2026-03-27-slice-940-trust-discoverability"
 ---
-> *from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html)*
-
-# Kriegspiel Rules
-
 ## I. Introduction:
 
 Kriegspiel is a partially observable variant of chess, in which the players cannot see the pieces or moves of their opponents. Because of this restriction, Kriegspiel cannot be played on a single chessboard; instead, playing in person requires three chessboards and a referee. Players sit back-to-back with the referee between them. The referee has the official board, upon which an ordinary-looking chess game is being played (at the direction of the players). Each player has a board with her own pieces in the correct locations, and is free to place her opponents' pieces wherever she likes (this placement, however, has no effect on the outcome of the game). When playing Kriegspiel online, the computer can serve as the referee. 
@@ -76,3 +72,5 @@ In chess, if a player has adequate material against a lone king, she can always 
 In fact, all of the above combinations of material can be used to force mate in Kriegspiel with arbitrary certainty. With a rook, queen, or non-edge pawn against a singleton king, a player can mate with probability 1, although this may require an unbounded number of moves (the expected number of moves, however, is bounded). In the other two scenarios (two bishops or bishop and knight), a forced mate can be achieved with probability 1-epsilon; epsilon can be made arbitrarily small, if the player with the advantage is willing to wait arbitrarily long to checkmate. 
 
 For the purpose of the checkmate problems we provide, positions with material forced checkmates (including epsilon checkmates) are considered to be immediate checkmate positions. To ensure that the opposing king cannot immediately capture the checkmating material, we only declare these positions to be checkmates when the player's king is protecting said material. For example, if a player can certainly reduce a position to KQvK with her king protecting her queen in one move, this is considered a forced checkmate in one move.
+
+*Taken from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html).*
