@@ -1,7 +1,7 @@
 ---
 title: "Wild16 Kriegspiel Rules"
 slug: "wild16"
-summary: "Wild16 announcement and move validation pattern used by major online play."
+summary: "ICC-style calls: illegal move, pawn tries, capture type, directional checks."
 publishedAt: "2026-03-27"
 updatedAt: "2026-03-27"
 author: "Kriegspiel Team"
