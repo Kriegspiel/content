@@ -1,7 +1,7 @@
 ---
 title: "Berkeley Kriegspiel Rules"
 slug: "berkeley"
-summary: "Berkeley variant ruleset and referee announcement semantics."
+summary: "Classic referee calls: No/Nonsense, capture square, directional checks."
 publishedAt: "2026-03-27"
 updatedAt: "2026-03-27"
 author: "Kriegspiel Team"
