@@ -22,6 +22,6 @@ We do **not** sell personal data. We may share data with service providers that 
 
 We keep data for as long as needed to operate the service, comply with legal obligations, resolve disputes, and protect the integrity and moderation of the game. Some gameplay or security records may be kept when needed for those purposes.
 
-You can request a copy of your data, or ask us to correct or delete it, by emailing **privacy-policy@kriegspiel.org**.
+You can request a copy of your data, or ask us to correct or delete it, by emailing **privacy@kriegspiel.org**.
 
 We may update this policy from time to time. The latest version will be posted here.
