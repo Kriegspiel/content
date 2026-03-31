@@ -21,4 +21,4 @@ Games, content, ratings, messages, and even accounts may occasionally be lost, r
 
 We may update these terms from time to time. If you keep using Kriegspiel after changes are posted here, that means you accept the revised terms.
 
-Questions about these terms: **legal@kriegspiel.org**
+Questions about these terms: **terms@kriegspiel.org**
