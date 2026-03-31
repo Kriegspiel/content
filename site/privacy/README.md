@@ -1,18 +1,27 @@
 ---
 title: "Privacy Policy"
 slug: "privacy"
-summary: "Privacy notice and analytics disclosure for Kriegspiel web properties."
+summary: "A brief plain-English summary of what data Kriegspiel collects and why."
 publishedAt: "2026-03-28T00:00:00.000Z"
-updatedAt: "2026-03-28T00:00:00.000Z"
+updatedAt: "2026-03-31T00:00:00.000Z"
 author: "Kriegspiel Team"
 tags: ["policy", "privacy"]
 draft: false
 ---
 
-We collect only operational telemetry required to keep the service reliable and improve product quality.
+We collect a few basic kinds of data to run Kriegspiel:
 
-- No PII (name, email, IP, freeform text) in analytics events.
-- Events are scoped to product interactions and route performance.
-- Analytics can be disabled by consent controls where required.
+- **Account data** you provide, such as your email address and profile details.
+- **Gameplay and activity data** such as games, moves, results, ratings, and related account activity.
+- **Support communications** you send us.
+- **Basic technical and log data** needed to operate, secure, and debug the service.
 
-Policy owner: legal@kriegspiel.org
+We use this data to run accounts and games, keep the service secure, prevent abuse, diagnose problems, respond to support and privacy requests, and improve the service.
+
+We do **not** sell personal data. We may share data with service providers that help us run Kriegspiel, or when required by law.
+
+We keep data for as long as needed to operate the service, comply with legal obligations, resolve disputes, and protect the integrity and moderation of the game. Some gameplay or security records may be kept when needed for those purposes.
+
+You can request a copy of your data, or ask us to correct or delete it, by emailing **privacy-policy@kriegspiel.org**.
+
+We may update this policy from time to time. The latest version will be posted here.
