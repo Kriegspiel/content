@@ -3,22 +3,15 @@ title: "About"
 slug: "about"
 summary: "About Kriegspiel.org and the public website track."
 publishedAt: "2026-03-29"
-updatedAt: "2026-03-29"
+updatedAt: "2026-03-31"
 author: "Kriegspiel Team"
 tags: ["site", "about"]
 draft: false
 ---
-Kriegspiel.org is the public home for the project: rules, changelog, editorial updates, and the website surface that explains what the product is doing.
+Kriegspiel is hidden-information chess: you cannot see your opponent’s pieces, and an umpire reveals only what your side is allowed to know. That makes every game a mix of chess, deduction, and nerve.
 
-The app lives at [app.kriegspiel.org](https://app.kriegspiel.org/). This site exists to make the public-facing side legible: how to play, what changed, what the policies are, and where to follow development.
+We are building a real online home for this variant — open source, playable in the browser, and meant to help more people discover why Kriegspiel is so good.
 
-## What this site covers
+The best way to help is simple: play, invite other people in, and spread the word. If you want to do more, contributions are welcome — code, writing, testing, ideas, and bug reports all help.
 
-- published rulesets and comparisons
-- changelog entries for public-facing work
-- blog posts and launch notes
-- policy pages and project links
-
-## What it does not replace
-
-This site does not replace the game client. If you want to play, use [Play online](https://app.kriegspiel.org/).
+We want this to stay a living game, not just a historical curiosity.
