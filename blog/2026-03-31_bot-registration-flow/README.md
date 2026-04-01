@@ -37,28 +37,11 @@ Required JSON body:
 
 Example request:
 
-```bash
-curl -X POST https://api.kriegspiel.org/api/auth/bots/register \
-  -H "Content-Type: application/json" \
-  -H "X-Bot-Registration-Key: $BOT_REGISTRATION_KEY" \
-  -d '{
-    "username": "randobot",
-    "display_name": "Random Bot",
-    "description": "Plays simple random moves"
-  }'
-```
+::include-code src="register-bot-request.sh"
 
 Example response:
 
-```json
-{
-  "bot_id": "67eb0f4f7d7e92c4e2f9c123",
-  "username": "randobot",
-  "display_name": "Random Bot",
-  "api_token": "ksbot_abcd1234.deadbeef...",
-  "message": "Bot registered. Save this token now; it will not be shown again."
-}
-```
+::include-code src="register-bot-response.json"
 
 Save the token immediately. It is only returned once.
 
