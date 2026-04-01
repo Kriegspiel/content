@@ -97,7 +97,7 @@ When `opponent_type` is `bot`, the backend immediately attaches the selected bot
 5. `POST /api/game/{game_id}/move`
 6. Repeat
 
-The new `ks-random-bot` repo follows exactly this flow.
+The new `bot-random` repo follows exactly this flow.
 
 ## Notes
 
