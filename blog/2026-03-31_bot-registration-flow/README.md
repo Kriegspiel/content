@@ -12,10 +12,11 @@ lifecycle: published
 
 We want to introduce bots to the platform so they can play on Kriegspiel.org alongside human players.
 
-The flow is intentionally simple:
+The flow is intentionally simple.
 
-1. Register once to receive a bot API token.
-2. Authenticate with that token to list assigned games, read state, and submit moves.
+**1.** Register once to receive a bot API token.
+
+**2.** Authenticate with that token to list assigned games, read state, and submit moves.
 
 ## 1. Register a bot
 
@@ -27,38 +28,15 @@ Required header:
 
 Required JSON body:
 
-```json
-{
-  "username": "randobot",
-  "display_name": "Random Bot",
-  "description": "Plays simple random moves"
-}
-```
+`{"username":"randobot","display_name":"Random Bot","description":"Plays simple random moves"}`
 
-Example:
+Example request:
 
-```bash
-curl -X POST https://api.kriegspiel.org/api/auth/bots/register \
-  -H "Content-Type: application/json" \
-  -H "X-Bot-Registration-Key: $BOT_REGISTRATION_KEY" \
-  -d '{
-    "username": "randobot",
-    "display_name": "Random Bot",
-    "description": "Plays simple random moves"
-  }'
-```
+`curl -X POST https://api.kriegspiel.org/api/auth/bots/register -H "Content-Type: application/json" -H "X-Bot-Registration-Key: $BOT_REGISTRATION_KEY" -d '{"username":"randobot","display_name":"Random Bot","description":"Plays simple random moves"}'`
 
 Example response:
 
-```json
-{
-  "bot_id": "67eb0f4f7d7e92c4e2f9c123",
-  "username": "randobot",
-  "display_name": "Random Bot",
-  "api_token": "ksbot_abcd1234.deadbeef...",
-  "message": "Bot registered. Save this token now; it will not be shown again."
-}
-```
+`{"bot_id":"67eb0f4f7d7e92c4e2f9c123","username":"randobot","display_name":"Random Bot","api_token":"ksbot_abcd1234.deadbeef...","message":"Bot registered. Save this token now; it will not be shown again."}`
 
 Save the token immediately. It is only returned once.
 
@@ -66,9 +44,7 @@ Save the token immediately. It is only returned once.
 
 Use the returned token as a bearer token:
 
-```http
-Authorization: Bearer ksbot_<token-id>.<token-secret>
-```
+`Authorization: Bearer ksbot_<token-id>.<token-secret>`
 
 ## 3. List available bots for humans
 
@@ -78,15 +54,7 @@ Signed-in human players can load the lobby bot picker from `GET /api/bots`.
 
 Humans create bot games with:
 
-```json
-{
-  "rule_variant": "berkeley_any",
-  "play_as": "random",
-  "time_control": "rapid",
-  "opponent_type": "bot",
-  "bot_id": "67eb0f4f7d7e92c4e2f9c123"
-}
-```
+`{"rule_variant":"berkeley_any","play_as":"random","time_control":"rapid","opponent_type":"bot","bot_id":"67eb0f4f7d7e92c4e2f9c123"}`
 
 Send that payload to `POST /api/game/create`.
 
@@ -94,12 +62,17 @@ When `opponent_type` is `bot`, the backend immediately attaches the selected bot
 
 ## 5. Runtime loop for bot authors
 
-1. `GET /api/game/mine`
-2. Filter to active games.
-3. `GET /api/game/{game_id}/state`
-4. If `turn` matches `your_color`, choose an action.
-5. `POST /api/game/{game_id}/move`
-6. Repeat.
+**1.** `GET /api/game/mine`
+
+**2.** Filter to active games.
+
+**3.** `GET /api/game/{game_id}/state`
+
+**4.** If `turn` matches `your_color`, choose an action.
+
+**5.** `POST /api/game/{game_id}/move`
+
+**6.** Repeat.
 
 For a working example, see [`bot-random`](https://github.com/Kriegspiel/bot-random), which follows this flow end to end.
 
