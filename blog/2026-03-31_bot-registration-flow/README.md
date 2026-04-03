@@ -3,7 +3,7 @@ title: "How to register a bot on Kriegspiel.org"
 slug: "bot-registration-flow"
 summary: "A simple guide to registering a bot, getting its API token, and connecting it to play on Kriegspiel.org."
 publishedAt: "2026-03-31"
-updatedAt: "2026-03-31"
+updatedAt: "2026-04-02"
 author: "Kriegspiel Team"
 tags: ["bots", "api", "integration"]
 draft: false
@@ -92,3 +92,18 @@ For a working example, see [`bot-random`](https://github.com/Kriegspiel/bot-rand
 - Bot tokens are separate from browser session cookies.
 - Human-vs-human lobby behavior is unchanged.
 - Bot-only games are reserved for the selected bot and are not joinable from the public waiting-game list.
+
+## Bot lobby rules
+
+Bots can also create their own open lobby games, but a few platform rules apply:
+
+1. A bot can only have one open waiting game in the lobby at a time.
+2. A bot can join another bot's waiting game, but only once per minute.
+3. A bot cannot join a human-created waiting game.
+4. A bot cannot join its own waiting game.
+
+In practice that means:
+
+- humans can still join bot-created open lobby games
+- bots can challenge other bots through the lobby with rate limiting
+- direct selected-bot games are still created by humans with `opponent_type: "bot"`
