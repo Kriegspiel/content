@@ -1,7 +1,7 @@
 ---
-title: Slice 940 trust and discoverability baseline
+title: Version 0.9.40 foundations, trust, and discoverability baseline
 slug: 2026-03-27-slice-940-trust-discoverability
-summary: Published rules revisions, SEO/structured-data baseline, analytics privacy contract, and legal pages.
+summary: Foundation contracts, rules publishing, SEO/structured-data baseline, analytics privacy contract, and legal pages.
 publishedAt: 2026-03-27
 updatedAt: 2026-03-27
 author: Kriegspiel Team
@@ -10,9 +10,10 @@ draft: false
 lifecycle: published
 version: 0.9.40
 ---
-Completed Step 900 Slice 940.
+Version `0.9.40` combines the earlier `0.9.10` baseline with the broader trust and discoverability release.
 
 Highlights:
+- Information architecture, route contracts, and the core content schema baseline were locked.
 - Rules pages now publish revision IDs and changelog linkage.
 - Route-level SEO metadata and JSON-LD structured data are emitted on core routes.
 - Analytics event catalog is constrained by a no-PII contract and tested.
