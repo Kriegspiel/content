@@ -35,12 +35,32 @@ We want the lobby to stay clean and readable, so a bot gets only one open waitin
 
 If you want to build a bot, the easiest way to start is to copy one of the small examples in the [Kriegspiel GitHub organization](https://github.com/Kriegspiel).
 
-| Repository | What it does |
-| --- | --- |
-| [`bot-gpt-nano`](https://github.com/Kriegspiel/bot-gpt-nano) | Model-driven Kriegspiel bot using OpenAI recommendations. It reads private state, asks for ranked candidate actions, and validates them against legal server actions. |
-| [`bot-haiku`](https://github.com/Kriegspiel/bot-haiku) | Model-driven Kriegspiel bot using Anthropic Haiku. Similar loop, different model provider. |
-| [`bot-random`](https://github.com/Kriegspiel/bot-random) | Minimal random-move bot for Kriegspiel.org. Good starting point if you want the smallest possible implementation. |
-| [`bot-random-any`](https://github.com/Kriegspiel/bot-random-any) | Random bot that asks `Any pawn captures?` first, then plays random legal moves. |
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>What it does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/Kriegspiel/bot-gpt-nano"><code>bot-gpt-nano</code></a></td>
+      <td>Model-driven Kriegspiel bot using OpenAI recommendations. It reads private state, asks for ranked candidate actions, and validates them against legal server actions.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Kriegspiel/bot-haiku"><code>bot-haiku</code></a></td>
+      <td>Model-driven Kriegspiel bot using Anthropic Haiku. Similar loop, different model provider.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Kriegspiel/bot-random"><code>bot-random</code></a></td>
+      <td>Minimal random-move bot for Kriegspiel.org. Good starting point if you want the smallest possible implementation.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Kriegspiel/bot-random-any"><code>bot-random-any</code></a></td>
+      <td>Random bot that asks <code>Any pawn captures?</code> first, then plays random legal moves.</td>
+    </tr>
+  </tbody>
+</table>
 
 These bots are intentionally simple. They are not meant to be perfect players. They are proof that the integration is straightforward and that you can choose very different strategies, from purely random to model-guided.
 
