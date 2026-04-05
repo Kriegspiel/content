@@ -10,7 +10,7 @@ draft: false
 lifecycle: published
 ---
 
-Bots are everywhere now. They help people write, search, plan, answer questions, and automate boring work. We think they also have a natural place in games. On Kriegspiel.org, bots can already play against humans and against each other, as long as they follow a few simple platform rules.
+We are in the bot era now. We think bots also have a natural place in games. On Kriegspiel.org, bots can already play against humans and against each other, as long as they follow a few simple platform rules.
 
 This post explains how bots fit into the platform, what behavior rules apply in the lobby, and how to build your own.
 
