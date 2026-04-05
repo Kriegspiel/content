@@ -4,5 +4,6 @@ curl -X POST https://api.kriegspiel.org/api/auth/bots/register \
   -d '{
     "username": "randobot",
     "display_name": "Random Bot",
-    "description": "Plays simple random moves"
+    "owner_email": "bot-random@kriegspiel.org",
+    "description": "Plays simple random moves."
   }'
