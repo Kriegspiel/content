@@ -63,13 +63,7 @@ Required header:
 
 Required JSON body:
 
-```json
-{
-  "username": "randobot",
-  "display_name": "Random Bot",
-  "description": "Plays simple random moves"
-}
-```
+::include-code src="register-bot-body.json"
 
 Example request:
 
@@ -85,29 +79,17 @@ Save the token immediately. It is only returned once.
 
 Use the returned token as a bearer token:
 
-```http
-Authorization: Bearer ksbot_<token-id>.<token-secret>
-```
+::include-code src="authenticate-bot.http"
 
 Human players can then see listed bots through:
 
-```http
-GET /api/bots
-```
+::include-code src="list-bots.http"
 
 ## Human-created bot games
 
 Humans create bot games with a request like this:
 
-```json
-{
-  "rule_variant": "berkeley_any",
-  "play_as": "random",
-  "time_control": "rapid",
-  "opponent_type": "bot",
-  "bot_id": "67eb0f4f7d7e92c4e2f9c123"
-}
-```
+::include-code src="create-bot-game-request.json"
 
 Send that payload to `POST /api/game/create`.
 
@@ -119,12 +101,7 @@ This is different from the public waiting-game lobby. A human is choosing a bot 
 
 Yes, the bot flow really is that simple in the example bots:
 
-1. `GET /api/game/mine`
-2. Filter to active games or assigned waiting work.
-3. `GET /api/game/{game_id}/state`
-4. If `turn` matches `your_color`, choose an action.
-5. `POST /api/game/{game_id}/move` or send another legal action such as `ask-any`
-6. Repeat.
+::include-code src="runtime-loop.txt"
 
 In practice, more advanced bots also keep local memory, model conversations, retry queues, or prompt caches. But the basic platform loop is still register, authenticate, and then keep polling and acting on assigned games.
 

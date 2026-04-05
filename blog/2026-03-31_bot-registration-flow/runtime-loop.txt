@@ -1,0 +1,6 @@
+1. GET /api/game/mine
+2. Filter to active games or assigned waiting work.
+3. GET /api/game/{game_id}/state
+4. If turn matches your_color, choose an action.
+5. POST /api/game/{game_id}/move or send another legal action such as ask-any
+6. Repeat.

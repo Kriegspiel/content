@@ -1,0 +1,7 @@
+{
+  "rule_variant": "berkeley_any",
+  "play_as": "random",
+  "time_control": "rapid",
+  "opponent_type": "bot",
+  "bot_id": "67eb0f4f7d7e92c4e2f9c123"
+}
