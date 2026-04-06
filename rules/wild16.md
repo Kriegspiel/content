@@ -1,7 +1,7 @@
 ---
 title: "Wild 16 Kriegspiel Rules"
 slug: "wild16"
-summary: "ICC-style calls: illegal move, pawn tries, capture type, directional checks."
+summary: "ICC-style calls: typed capture wording, pawn tries, and directional checks."
 publishedAt: "2026-03-27"
 updatedAt: "2026-04-05"
 author: "Kriegspiel Team"
@@ -19,7 +19,6 @@ Wild 16 is broadly the same hidden-information game as Berkeley Kriegspiel, but 
 
 - Captures are announced by piece type: `Pawn at %square% captured` or `Piece at %square% captured`.
 - The Any rule is built in by default. Instead of a yes/no answer, the referee says `%number% pawn tries`.
-- Illegal moves are always answered with `Illegal move`.
 
 ## Referee Announcements
 
