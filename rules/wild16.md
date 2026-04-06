@@ -17,13 +17,9 @@ Wild 16 is broadly the same hidden-information game as Berkeley Kriegspiel, but 
 
 ## Key Differences From Berkeley
 
-- Captures are announced by piece type:
-  - `Pawn at %square% captured`
-  - `Piece at %square% captured`
-- The Any rule is built in by default. Instead of a yes/no answer, the referee says:
-  - `%number% pawn tries`
-- Illegal moves are always answered with:
-  - `Illegal move`
+- Captures are announced by piece type: `Pawn at %square% captured` or `Piece at %square% captured`.
+- The Any rule is built in by default. Instead of a yes/no answer, the referee says `%number% pawn tries`.
+- Illegal moves are always answered with `Illegal move`.
 
 ## Referee Announcements
 
