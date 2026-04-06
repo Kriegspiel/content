@@ -1,5 +1,5 @@
 ---
-title: "Wild16 Kriegspiel Rules"
+title: "Wild 16 Kriegspiel Rules"
 slug: "wild16"
 summary: "ICC-style calls: illegal move, pawn tries, capture type, directional checks."
 publishedAt: "2026-03-27"
@@ -42,5 +42,6 @@ Wild 16 is broadly the same hidden-information game as Berkeley Kriegspiel, but 
 
 - Wild 16 should be read as a concise Berkeley-style variant, not as a full replacement for the Berkeley rules text.
 - The key practical change is that capture announcements distinguish pawns from other pieces, and pawn-capture availability is reported as a count rather than a yes/no answer.
+- The original Chessclub help page is no longer live, so retrieving it now requires the Wayback Machine or other archived copies.
 
 *Content adapted from [www.chessclub.com/help/Kriegspiel](https://www.chessclub.com/help/Kriegspiel).*
