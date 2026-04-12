@@ -3,14 +3,14 @@ title: "Berkeley Kriegspiel Rules"
 slug: "berkeley"
 summary: "Classic referee calls: No/Nonsense, capture square, directional checks."
 publishedAt: "2026-03-27"
-updatedAt: "2026-03-27"
+updatedAt: "2026-04-12"
 author: "Kriegspiel Team"
 tags: ["rules", "berkeley"]
 draft: false
 lifecycle: published
 version: "1.0.0"
-revision: "rules-berkeley-r1"
-lastReviewedAt: "2026-03-27"
+revision: "rules-berkeley-r2"
+lastReviewedAt: "2026-04-12"
 changelogSlug: "2026-03-27-slice-940-trust-discoverability"
 ---
 ## I. Introduction:
@@ -69,8 +69,20 @@ Specifically, a player must have at least a queen, rook, two bishop/knights, or 
 
 In chess, if a player has adequate material against a lone king, she can always follow a fairly simple algorithm to force checkmate. Adequate material is defined as a queen, rook, non-edge pawn, two bishops, or a bishop and knight (assuming that the opponent's king cannot immediately capture said material). Interestingly, similar material forced checkmates exist in Kriegspiel, despite the fact that a player cannot see the location of her opponent's king. 
 
-In fact, all of the above combinations of material can be used to force mate in Kriegspiel with arbitrary certainty. With a rook, queen, or non-edge pawn against a singleton king, a player can mate with probability 1, although this may require an unbounded number of moves (the expected number of moves, however, is bounded). In the other two scenarios (two bishops or bishop and knight), a forced mate can be achieved with probability 1-epsilon; epsilon can be made arbitrarily small, if the player with the advantage is willing to wait arbitrarily long to checkmate. 
+In fact, all of the above combinations of material can be used to force mate in Kriegspiel with arbitrary certainty. With a rook, queen, or non-edge pawn against a singleton king, a player can mate with probability 1, although this may require an unbounded number of moves (the expected number of moves, however, is bounded). In the other two scenarios (two bishops or bishop and knight), a forced mate can be achieved with probability 1-epsilon; epsilon can be made arbitrarily small, if the player with the advantage is willing to wait arbitrarily long to checkmate.
 
 For the purpose of the checkmate problems we provide, positions with material forced checkmates (including epsilon checkmates) are considered to be immediate checkmate positions. To ensure that the opposing king cannot immediately capture the checkmating material, we only declare these positions to be checkmates when the player's king is protecting said material. For example, if a player can certainly reduce a position to KQvK with her king protecting her queen in one move, this is considered a forced checkmate in one move.
+
+---
+
+## Berkeley Kriegspiel Rules with "Any" modification
+
+This is the standard Berkeley ruleset above, with one extra public referee announcement for online play.
+
+- During her turn, a player may ask: `Are there any pawn captures?`
+- The referee answers publicly: `Has pawn captures` or `No pawn captures`.
+- If the answer is `Has pawn captures`, the player must complete a legal pawn capture on that turn.
+
+This modification is useful online because the question cannot stay secret, and otherwise a long list of pawn-capture tries would become visible in the referee log anyway. It also adds a bit more public information to the game.
 
 *Taken from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html).*
