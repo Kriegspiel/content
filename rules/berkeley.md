@@ -75,14 +75,16 @@ For the purpose of the checkmate problems we provide, positions with material fo
 
 ---
 
+*Taken from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html).*
+
+---
+
 ## Berkeley Kriegspiel Rules with "Any" modification
 
-This is the standard Berkeley ruleset above, with one extra public referee announcement for online play.
+This is the same Berkeley ruleset above, with one extra public referee announcement for online play.
 
 - During her turn, a player may ask: `Are there any pawn captures?`
 - The referee answers publicly: `Has pawn captures` or `No pawn captures`.
 - If the answer is `Has pawn captures`, the player must complete a legal pawn capture on that turn.
 
-This modification is useful online because the question cannot stay secret, and otherwise a long list of pawn-capture tries would become visible in the referee log anyway. It also adds a bit more public information to the game.
-
-*Taken from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html).*
+This modification is useful online because the question cannot stay secret, and otherwise every pawn-capture try would become visible in the referee log anyway. It also adds a bit more public information to the game.
