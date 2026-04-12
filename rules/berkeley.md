@@ -73,8 +73,6 @@ In fact, all of the above combinations of material can be used to force mate in 
 
 For the purpose of the checkmate problems we provide, positions with material forced checkmates (including epsilon checkmates) are considered to be immediate checkmate positions. To ensure that the opposing king cannot immediately capture the checkmating material, we only declare these positions to be checkmates when the player's king is protecting said material. For example, if a player can certainly reduce a position to KQvK with her king protecting her queen in one move, this is considered a forced checkmate in one move.
 
----
-
 *Taken from [w01lfe's Berkeley rules](http://w01fe.com/berkeley/kriegspiel/rules.html).*
 
 ---
