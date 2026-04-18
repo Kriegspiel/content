@@ -12,9 +12,10 @@ lifecycle: published
 
 Kriegspiel has always been a small game with an outsized research footprint. It looks like chess, but its hidden information turns ordinary move search into a problem about belief states, partial observability, referee announcements, and uncertainty.
 
-When we went looking for the public academic trail, three clusters stood out most clearly:
+When we went looking for the public academic trail, three clusters and one especially important bridge figure stood out most clearly:
 
-- an older mathematical line around UCLA, Thomas Ferguson, and Lloyd Shapley
+- an older English and mathematical line running from Anderson to Ferguson
+- Lloyd Shapley as a RAND-to-UCLA bridge figure with a smaller but important Kriegspiel trail of his own
 - a long and unusually rich Bologna line around Paolo Ciancarini and collaborators
 - a smaller Berkeley line centered on Jason Wolfe and Stuart Russell
 
@@ -49,6 +50,29 @@ The central published item here is Ferguson's [*Mate with bishop and knight in k
 - Ferguson's paper explicitly connects back to Anderson's English-rule problem book and to Lloyd Shapley's Kriegspiel work.
 - UCLA also still hosts related unpublished Ferguson notes such as [*Mate with the Two Bishops in Kriegspiel*](https://www.math.ucla.edu/~tom/papers/unpublished/kriegbishop.pdf) and [*On a Kreigspiel Problem of Lloyd Shapley*](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf).
 - Taken together, these materials feel less like a broad software program and more like a mathematical endgame tradition around specific forced-mate questions.
+
+## Lloyd Shapley: the bridge figure we should have listed directly
+
+Lloyd S. Shapley was one of the founding giants of game theory, later a Nobel laureate, first at RAND and later at UCLA. He was also a serious Kriegspiel player, problem composer, and theorist of the game. The public record around him is just less tidy than the Bologna or Berkeley clusters: fewer journal papers, more manuscripts, problem collections, rules packets, and later papers built around his ideas.
+
+That is the real reason the earlier versions of this post underplayed him. It was not because he was unimportant. It was because his Kriegspiel trail is more archival and manuscript-based than the more easily tabled Bologna and Berkeley publication lines.
+
+For background on Shapley himself, the clearest short public references we found are UCLA's [Nobel profile and reminiscence](https://newsroom.ucla.edu/stories/colleagues-at-ucla-applaud-lloyd-239730), the [Game Theory Society memorial](https://gametheorysociety.org/in-memoriam-lloyd-s-shapley-1924-2016/), and the [Harlow Shapley Project's Lloyd pages](https://harlowshapley.org/lloyd).
+
+### Direct Shapley Kriegspiel item we found
+
+| Year | Author | Title | Venue or type |
+| --- | --- | --- | --- |
+| 1987 | Lloyd S. Shapley | [*The Invisible Chessboard*](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) | Unpublished manuscript and problem collection, public archival scan |
+
+### Public Shapley-centered Kriegspiel items worth listing too
+
+| Year | Author | Title | Venue or type |
+| --- | --- | --- | --- |
+| 1992 | Thomas S. Ferguson | [*Mate with bishop and knight in kriegspiel*](https://www.math.ucla.edu/~tom/papers/ks.pdf) | Theoretical Computer Science; cites Shapley's manuscript directly |
+| unpublished public PDF | Thomas S. Ferguson | [*On a Kreigspiel Problem of Lloyd Shapley*](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) | UCLA-hosted note on a Shapley quarter-infinite-board problem |
+| 2018 | Alexander Matros | [*Lloyd Shapley and chess with imperfect information*](https://eprints.lancs.ac.uk/id/eprint/89158/) | Games and Economic Behavior; retrospective analysis of Shapley's problems |
+| undated public archive | Harlow Shapley Project | [*Kriegspiel rules and Lloyd Shapley demo*](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) | Archival packet linking Williams' rules and Shapley material |
 
 ## Bologna: the deepest public line
 
@@ -115,6 +139,7 @@ The 1972 paper is worth calling out because it is an early Berkeley-connected sy
 The Bologna and Berkeley lines overlap, but they do not feel identical.
 
 - UCLA looks like the clearest mathematical endgame line: deep, specific, and focused on forced-mate questions.
+- Shapley looks less like a neat publication cluster and more like a bridge figure: RAND lunch-hour Kriegspiel, UCLA mathematics, unpublished problem manuscripts, and later formal analysis.
 - Bologna looks like the broadest public research program: representation, search, endgames, MCTS, and strong practical play.
 - Berkeley looks like a narrower but very elegant line: define a variant, define benchmarks, and attack the belief-state search problem directly.
 - Together they explain why Kriegspiel keeps attracting researchers. It is not just a chess variant. It is a clean laboratory for reasoning under hidden information.
@@ -123,10 +148,11 @@ If you want a reading order, this is the one we would suggest:
 
 1. Start with Anderson's *Are There Any?* if you want an older problem-book view of English Kriegspiel.
 2. Read Ferguson's [*Mate with bishop and knight in kriegspiel*](https://www.math.ucla.edu/~tom/papers/ks.pdf) for the UCLA mathematical line.
-3. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
-4. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
-5. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
-6. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
+3. Read Shapley's [*The Invisible Chessboard*](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) and Ferguson's [Shapley note](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) for the RAND/UCLA bridge.
+4. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
+5. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
+6. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
+7. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
 
 That gives you one broad research tradition and one clean belief-state tradition, which is a very good starting map for anyone building modern Kriegspiel software.
 
