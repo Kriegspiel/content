@@ -33,4 +33,4 @@ draft: false
 # Social
 - [X.com](https://x.com/kriegspiel_org)
 - [GitHub](https://github.com/Kriegspiel)
-- [hi@kriegspiel.org](mailto:hi@kriegspiel.org)
+- [any@kriegspiel.org](mailto:any@kriegspiel.org)
