@@ -10,4 +10,4 @@ draft: false
 lifecycle: published
 ---
 
-Just a launch note, to keep track of days.
+Hello, world!
