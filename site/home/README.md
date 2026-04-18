@@ -8,7 +8,7 @@ author: "Kriegspiel Team"
 tags: ["homepage", "landing-page"]
 draft: false
 eyebrow: ""
-heroTitle: "Play Hidden-Information Chess Online"
+heroTitle: "Play hidden-information chess online"
 heroLede: "Simple, fun, and ready when you are. Jump into a game in your browser where you know your pieces, not your opponent’s board."
 heroPrimaryCtaLabel: "Play now"
 heroPrimaryCtaHref: "https://app.kriegspiel.org/"
