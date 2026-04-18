@@ -1,7 +1,7 @@
 ---
 title: "A research map of Kriegspiel"
 slug: "kriegspiel-research-map"
-summary: "A compact guide to the main public research lines on Kriegspiel, with publication lists from Bologna and Berkeley."
+summary: "A compact guide to the main public research lines on Kriegspiel, from Anderson and UCLA to Bologna and Berkeley."
 publishedAt: "2026-04-18"
 updatedAt: "2026-04-18"
 author: "Kriegspiel Team"
@@ -12,8 +12,9 @@ lifecycle: published
 
 Kriegspiel has always been a small game with an outsized research footprint. It looks like chess, but its hidden information turns ordinary move search into a problem about belief states, partial observability, referee announcements, and uncertainty.
 
-When we went looking for the public academic trail, two clusters stood out most clearly:
+When we went looking for the public academic trail, three clusters stood out most clearly:
 
+- an older mathematical line around UCLA, Thomas Ferguson, and Lloyd Shapley
 - a long and unusually rich Bologna line around Paolo Ciancarini and collaborators
 - a smaller Berkeley line centered on Jason Wolfe and Stuart Russell
 
@@ -30,6 +31,24 @@ The book appears with a small date ambiguity in later references. Thomas Ferguso
 - Gerald Frank Anderson, *Are There Any? A Chess Problem Book* (`1958/1959`)
 
 The title itself is a piece of Kriegspiel history. "Are there any?" is the famous English-rule question about whether there are any legal pawn tries available. That makes the book more than a bibliography footnote: it captures a whole rules culture around the game.
+
+## UCLA: the mathematical endgame line
+
+One thing the first version of this post underplayed was UCLA. Thomas S. Ferguson's Kriegspiel work deserves to be called out directly, because it represents a different kind of contribution again: a more mathematical and endgame-focused line.
+
+The central published item here is Ferguson's *Mate with bishop and knight in kriegspiel*, published in *Theoretical Computer Science* in 1992. The UCLA-hosted PDF is still available, and it is a substantial paper, not just a note. Its main result is that king, bishop, and knight can win against king alone in Kriegspiel with probability one, together with a constructive winning procedure.
+
+### UCLA publication we should have listed
+
+| Year | Author | Title | Venue or type |
+| --- | --- | --- | --- |
+| 1992 | Thomas S. Ferguson | *Mate with bishop and knight in kriegspiel* | Theoretical Computer Science 96(2), 389-403 |
+
+### Related UCLA-hosted Kriegspiel materials
+
+- Ferguson's paper explicitly connects back to Anderson's English-rule problem book and to Lloyd Shapley's Kriegspiel work.
+- UCLA also still hosts related unpublished Ferguson notes such as *Mate with the Two Bishops in Kriegspiel* and *On a Kreigspiel Problem of Lloyd Shapley*.
+- Taken together, these materials feel less like a broad software program and more like a mathematical endgame tradition around specific forced-mate questions.
 
 ## Bologna: the deepest public line
 
@@ -95,6 +114,7 @@ The 1972 paper is worth calling out because it is an early Berkeley-connected sy
 
 The Bologna and Berkeley lines overlap, but they do not feel identical.
 
+- UCLA looks like the clearest mathematical endgame line: deep, specific, and focused on forced-mate questions.
 - Bologna looks like the broadest public research program: representation, search, endgames, MCTS, and strong practical play.
 - Berkeley looks like a narrower but very elegant line: define a variant, define benchmarks, and attack the belief-state search problem directly.
 - Together they explain why Kriegspiel keeps attracting researchers. It is not just a chess variant. It is a clean laboratory for reasoning under hidden information.
@@ -102,10 +122,11 @@ The Bologna and Berkeley lines overlap, but they do not feel identical.
 If you want a reading order, this is the one we would suggest:
 
 1. Start with Anderson's *Are There Any?* if you want an older problem-book view of English Kriegspiel.
-2. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
-3. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
-4. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
-5. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
+2. Read Ferguson's [*Mate with bishop and knight in kriegspiel*](https://www.math.ucla.edu/~tom/papers/ks.pdf) for the UCLA mathematical line.
+3. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
+4. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
+5. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
+6. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
 
 That gives you one broad research tradition and one clean belief-state tradition, which is a very good starting map for anyone building modern Kriegspiel software.
 
