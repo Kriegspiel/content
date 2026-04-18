@@ -1,7 +1,7 @@
 ---
-title: "Welcome to Kriegspiel.org"
+title: "Launch notes for the website track"
 slug: "welcome"
-summary: "Launch notes for the website track."
+summary: "Just a launch note, to keep track of days."
 publishedAt: "2026-03-27"
 updatedAt: "2026-03-27"
 author: "Kriegspiel Team"
@@ -10,4 +10,4 @@ draft: false
 lifecycle: published
 ---
 
-Hello, world!
+Just a launch note, to keep track of days.
