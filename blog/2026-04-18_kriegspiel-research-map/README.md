@@ -12,14 +12,18 @@ lifecycle: published
 
 Kriegspiel has always been a small game with an outsized research footprint. It looks like chess, but its hidden information turns ordinary move search into a problem about belief states, partial observability, referee announcements, and uncertainty.
 
-When we went looking for the public academic trail, three clusters and one especially important bridge figure stood out most clearly:
+When we went looking for the public academic trail, several clusters and one especially important bridge figure stood out most clearly:
 
 - an older English and mathematical line running from Anderson to Ferguson
 - Lloyd Shapley as a RAND-to-UCLA bridge figure with a smaller but important Kriegspiel trail of his own
+- a Japanese and Shogi-adjacent line around Makoto Sakuta, Hiroyuki Iida, and Jin Yoshimura
+- a Maryland line around Austin Parker, Dana Nau, and V. S. Subrahmanian
 - a long and unusually rich Bologna line around Paolo Ciancarini and collaborators
 - a smaller Berkeley line centered on Jason Wolfe and Stuart Russell
 
 This post is not a complete bibliography of every Kriegspiel paper ever written. It is a practical map of the public materials we found while tracing the modern research history of the game.
+
+One especially useful secondary index while doing that work was the Chessprogramming wiki's [KriegSpiel page](https://www.chessprogramming.org/KriegSpiel). It is not a substitute for the primary papers, but it is a very good cross-check because it collects publication links, Computer Olympiad notes, and wider context such as Henry Michael Temple's 1899 origin story and the ICC / Wild 16 rules line.
 
 ## Before Bologna and Berkeley: Anderson and the English problem tradition
 
@@ -74,11 +78,45 @@ For background on Shapley himself, the clearest short public references we found
 | 2018 | Alexander Matros | [Lloyd Shapley and chess with imperfect information](https://eprints.lancs.ac.uk/id/eprint/89158/) | Games and Economic Behavior; retrospective analysis of Shapley's problems |
 | undated public archive | Harlow Shapley Project | [Kriegspiel rules and Lloyd Shapley demo](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) | Archival packet linking Williams' rules and Shapley material |
 
+## Two more research lines the Chessprogramming wiki helps surface
+
+One thing the Chessprogramming wiki makes much easier to see is that the Bologna and Berkeley lines are not the whole modern technical story. It also preserves a smaller Japanese line around Kriegspiel-like solving methods, and a Maryland line focused on huge belief states and opponent models.
+
+### Japan: Sakuta, Iida, and Kriegspiel-like solving
+
+This line is slightly adjacent to orthodox chess Kriegspiel rather than identical to it. A lot of the work is framed through Tsuitate-Tsume-Shogi, or screen-shogi mating problems, but the reason it belongs on a Kriegspiel research map is that it tackles the same core question: how to search and solve game trees under uncertainty.
+
+### Japanese and Kriegspiel-like publications surfaced by the Chessprogramming wiki
+
+| Year | Authors | Title | Venue or type |
+| --- | --- | --- | --- |
+| 2000 | Makoto Sakuta, Hiroyuki Iida, Jin Yoshimura | [A Deterministic Approach for Solving Kriegspiel-like Problems](https://www.chessprogramming.org/5th_Computer_Olympiad) | 5th Computer Olympiad Workshop |
+| 2000 | Makoto Sakuta, Hiroyuki Iida | [Solving Kriegspiel-Like Problems: Examining Efficient Search Methods](https://link.springer.com/chapter/10.1007/3-540-45579-5_4) | Computers and Games 2000 |
+| 2000 | Makoto Sakuta, Hiroyuki Iida | [Solving Kriegspiel-like Problems: Exploiting a Transposition Table](https://dblp.org/rec/journals/icga/SakutaI00) | ICGA Journal 23(4) |
+| 2000 | Makoto Sakuta, Hiroyuki Iida, Jin Yoshimura | [Solving Problems under Uncertainty Paradigm](https://www.fit.ac.jp/~sakuta/research/tts-papers.html) | SSGRR 2000; listed on Sakuta's public research page |
+
+If the UCLA line is the cleanest mathematical endgame line, then the Sakuta-Iida line is the clearest "Kriegspiel-like solving methods" line. It leans toward proof-number style search, AND/OR search, and deterministic solving of uncertainty-heavy puzzles rather than full practical play on ICC.
+
+### Maryland: Parker, Nau, and Subrahmanian
+
+The Chessprogramming wiki also makes it easier to spot a Maryland line that we had only indirectly touched before. These papers are not about composing problems or endgame theory. They are about huge belief states, statistical sampling, and opponent modeling in imperfect-information games, with Kriegspiel used as a core testbed.
+
+### Maryland publications we should have listed directly
+
+| Year | Authors | Title | Venue or type |
+| --- | --- | --- | --- |
+| 2005 | Austin Parker, Dana S. Nau, V. S. Subrahmanian | [Game-Tree Search with Combinatorially Large Belief States](https://www.cs.umd.edu/~nau/papers/parker2005game-tree.pdf) | IJCAI 2005 |
+| 2006 | Austin Parker, Dana S. Nau, V. S. Subrahmanian | [Overconfidence or Paranoia? Search in Imperfect-Information Games](https://cdn.aaai.org/AAAI/2006/AAAI06-164.pdf) | AAAI 2006 |
+
+Taken together, those papers sit very naturally beside the Berkeley belief-state work. They are not identical in framing, but they belong in the same conversation about search under hidden information.
+
 ## Bologna: the deepest public line
 
 The strongest public cluster we found is the Bologna one. The core source is Paolo Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html), backed by his [chess library page](https://www.cs.unibo.it/~cianca/wwwpages/chesssite/mychesspage.html) and Giampiero Favini's doctoral thesis, [The dark side of the board: advances in chess Kriegspiel](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf).
 
 What makes the Bologna line stand out is breadth. It covers metapositions, practical playing programs, Monte Carlo Tree Search, retrograde endgame analysis, and the bridge from theory to strong ICC play.
+
+The Chessprogramming wiki also helps preserve the competitive side of that story. It links the Olympiad notes around Darkboard, including [Darkboard wins KriegSpiel tournament](https://journals.sagepub.com/toc/icg/29/2) at the 11th Computer Olympiad and [Darkboard wins KriegSpiel tournament](https://www.chessprogramming.org/14th_Computer_Olympiad) at the 14th Computer Olympiad.
 
 ### Bologna publications listed on Ciancarini's Kriegspiel page
 
@@ -140,6 +178,8 @@ The Bologna and Berkeley lines overlap, but they do not feel identical.
 
 - UCLA looks like the clearest mathematical endgame line: deep, specific, and focused on forced-mate questions.
 - Shapley looks less like a neat publication cluster and more like a bridge figure: RAND lunch-hour Kriegspiel, UCLA mathematics, unpublished problem manuscripts, and later formal analysis.
+- Sakuta and Iida look like the clearest Kriegspiel-like solving-method line: proof-number search, AND/OR search, and deterministic solving under uncertainty.
+- Parker, Nau, and Subrahmanian look like a Maryland belief-state line: large hidden-state spaces, sampling, and opponent models.
 - Bologna looks like the broadest public research program: representation, search, endgames, MCTS, and strong practical play.
 - Berkeley looks like a narrower but very elegant line: define a variant, define benchmarks, and attack the belief-state search problem directly.
 - Together they explain why Kriegspiel keeps attracting researchers. It is not just a chess variant. It is a clean laboratory for reasoning under hidden information.
@@ -149,10 +189,13 @@ If you want a reading order, this is the one we would suggest:
 1. Start with Anderson's *Are There Any?* if you want an older problem-book view of English Kriegspiel.
 2. Read Ferguson's [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf) for the UCLA mathematical line.
 3. Read Shapley's [The Invisible Chessboard](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) and Ferguson's [Shapley note](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) for the RAND/UCLA bridge.
-4. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
-5. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
-6. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
-7. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
+4. Read the Sakuta-Iida line, starting with [Solving Kriegspiel-Like Problems: Examining Efficient Search Methods](https://link.springer.com/chapter/10.1007/3-540-45579-5_4).
+5. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
+6. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
+7. Read Parker, Nau, and Subrahmanian's [Game-Tree Search with Combinatorially Large Belief States](https://www.cs.umd.edu/~nau/papers/parker2005game-tree.pdf).
+8. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
+9. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
+10. Keep the Chessprogramming wiki's [KriegSpiel page](https://www.chessprogramming.org/KriegSpiel) open as a secondary index while you read. It fills in the Sakuta-Iida line, the Parker-Nau line, and the Olympiad record around Darkboard.
 
 That gives you one broad research tradition and one clean belief-state tradition, which is a very good starting map for anyone building modern Kriegspiel software.
 
