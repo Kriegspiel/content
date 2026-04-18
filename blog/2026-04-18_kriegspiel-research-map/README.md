@@ -23,13 +23,13 @@ This post is not a complete bibliography of every Kriegspiel paper ever written.
 
 ## Before Bologna and Berkeley: Anderson and the English problem tradition
 
-There is also an earlier book-length source that deserves to be named on its own: Gerald Frank Anderson's <a href="https://www.chesshistory.com/winter/winter15.html"><em>Are There Any? A Chess Problem Book</em></a>.
+There is also an earlier book-length source that deserves to be named on its own: Gerald Frank Anderson's [Are There Any? A Chess Problem Book](https://www.chesshistory.com/winter/winter15.html).
 
 It does not belong to the later Bologna or Berkeley AI lines. It belongs to an older English Kriegspiel problem tradition, centered more on composed problems and referee logic than on modern search algorithms. That is exactly why it still matters.
 
 The book appears with a small date ambiguity in later references. Thomas Ferguson cites it as a `1958` book in his UCLA paper on Kriegspiel endgames, while Edward Winter refers to it as Anderson's `1959` book, and Ciancarini's *La Scacchiera Invisibile* treats it as the classic Anderson source on Kriegspiel problems. The safe way to cite it is:
 
-- Gerald Frank Anderson, <a href="https://www.chesshistory.com/winter/winter15.html"><em>Are There Any? A Chess Problem Book</em></a> (`1958/1959`)
+- Gerald Frank Anderson, [Are There Any? A Chess Problem Book](https://www.chesshistory.com/winter/winter15.html) (`1958/1959`)
 
 The title itself is a piece of Kriegspiel history. "Are there any?" is the famous English-rule question about whether there are any legal pawn tries available. That makes the book more than a bibliography footnote: it captures a whole rules culture around the game.
 
@@ -37,18 +37,18 @@ The title itself is a piece of Kriegspiel history. "Are there any?" is the famou
 
 One thing the first version of this post underplayed was UCLA. Thomas S. Ferguson's Kriegspiel work deserves to be called out directly, because it represents a different kind of contribution again: a more mathematical and endgame-focused line.
 
-The central published item here is Ferguson's <a href="https://www.math.ucla.edu/~tom/papers/ks.pdf"><em>Mate with bishop and knight in kriegspiel</em></a>, published in *Theoretical Computer Science* in 1992. The UCLA-hosted PDF is still available, and it is a substantial paper, not just a note. Its main result is that king, bishop, and knight can win against king alone in Kriegspiel with probability one, together with a constructive winning procedure.
+The central published item here is Ferguson's [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf), published in *Theoretical Computer Science* in 1992. The UCLA-hosted PDF is still available, and it is a substantial paper, not just a note. Its main result is that king, bishop, and knight can win against king alone in Kriegspiel with probability one, together with a constructive winning procedure.
 
 ### UCLA publication we should have listed
 
 | Year | Author | Title | Venue or type |
 | --- | --- | --- | --- |
-| 1992 | Thomas S. Ferguson | <a href="https://www.math.ucla.edu/~tom/papers/ks.pdf"><em>Mate with bishop and knight in kriegspiel</em></a> | Theoretical Computer Science 96(2), 389-403 |
+| 1992 | Thomas S. Ferguson | [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf) | Theoretical Computer Science 96(2), 389-403 |
 
 ### Related UCLA-hosted Kriegspiel materials
 
 - Ferguson's paper explicitly connects back to Anderson's English-rule problem book and to Lloyd Shapley's Kriegspiel work.
-- UCLA also still hosts related unpublished Ferguson notes such as <a href="https://www.math.ucla.edu/~tom/papers/unpublished/kriegbishop.pdf"><em>Mate with the Two Bishops in Kriegspiel</em></a> and <a href="https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf"><em>On a Kreigspiel Problem of Lloyd Shapley</em></a>.
+- UCLA also still hosts related unpublished Ferguson notes such as [Mate with the Two Bishops in Kriegspiel](https://www.math.ucla.edu/~tom/papers/unpublished/kriegbishop.pdf) and [On a Kreigspiel Problem of Lloyd Shapley](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf).
 - Taken together, these materials feel less like a broad software program and more like a mathematical endgame tradition around specific forced-mate questions.
 
 ## Lloyd Shapley: the bridge figure we should have listed directly
@@ -63,16 +63,16 @@ For background on Shapley himself, the clearest short public references we found
 
 | Year | Author | Title | Venue or type |
 | --- | --- | --- | --- |
-| 1987 | Lloyd S. Shapley | <a href="https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf"><em>The Invisible Chessboard</em></a> | Unpublished manuscript and problem collection, public archival scan |
+| 1987 | Lloyd S. Shapley | [The Invisible Chessboard](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) | Unpublished manuscript and problem collection, public archival scan |
 
 ### Public Shapley-centered Kriegspiel items worth listing too
 
 | Year | Author | Title | Venue or type |
 | --- | --- | --- | --- |
-| 1992 | Thomas S. Ferguson | <a href="https://www.math.ucla.edu/~tom/papers/ks.pdf"><em>Mate with bishop and knight in kriegspiel</em></a> | Theoretical Computer Science; cites Shapley's manuscript directly |
-| unpublished public PDF | Thomas S. Ferguson | <a href="https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf"><em>On a Kreigspiel Problem of Lloyd Shapley</em></a> | UCLA-hosted note on a Shapley quarter-infinite-board problem |
-| 2018 | Alexander Matros | <a href="https://eprints.lancs.ac.uk/id/eprint/89158/"><em>Lloyd Shapley and chess with imperfect information</em></a> | Games and Economic Behavior; retrospective analysis of Shapley's problems |
-| undated public archive | Harlow Shapley Project | <a href="https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf"><em>Kriegspiel rules and Lloyd Shapley demo</em></a> | Archival packet linking Williams' rules and Shapley material |
+| 1992 | Thomas S. Ferguson | [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf) | Theoretical Computer Science; cites Shapley's manuscript directly |
+| unpublished public PDF | Thomas S. Ferguson | [On a Kreigspiel Problem of Lloyd Shapley](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) | UCLA-hosted note on a Shapley quarter-infinite-board problem |
+| 2018 | Alexander Matros | [Lloyd Shapley and chess with imperfect information](https://eprints.lancs.ac.uk/id/eprint/89158/) | Games and Economic Behavior; retrospective analysis of Shapley's problems |
+| undated public archive | Harlow Shapley Project | [Kriegspiel rules and Lloyd Shapley demo](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) | Archival packet linking Williams' rules and Shapley material |
 
 ## Bologna: the deepest public line
 
@@ -84,31 +84,31 @@ What makes the Bologna line stand out is breadth. It covers metapositions, pract
 
 | Year | Title | Venue or type |
 | --- | --- | --- |
-| 1997 | <a href="https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/rational.pdf"><em>A Rational Approach to Kriegspiel</em></a> | Advances in Computer Chess 8 |
-| 2003 | <a href="https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/endings.pdf"><em>Computer Programming of Kriegspiel Endings</em></a> | Advances in Computer Games 10 |
-| 2004 | <a href="https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/metapositions.pdf"><em>Searching over Metapositions in Kriegspiel</em></a> | Computer and Games 2004 |
-| 2007 | <a href="https://www.ijcai.org/Proceedings/07/Papers/394.pdf"><em>Representing Kriegspiel States with Metapositions</em></a> | IJCAI 2007 |
-| 2007 | <a href="https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/2007Amsterdam.pdf"><em>Moving in the Dark: Progress through Uncertainty in Kriegspiel</em></a> | Computer Games Workshop 2007 |
-| 2007 | <a href="https://doi.org/10.3233/ICG-2007-30102"><em>A Program to Play Kriegspiel</em></a> | ICGA Journal |
-| 2009 | <a href="https://cris.unibo.it/handle/11585/83676"><em>Solving Kriegspiel endings with brute force: the case of KR vs. K</em></a> | Advances in Computer Games 12 |
-| 2009 | <a href="https://www.ijcai.org/Proceedings/09/Papers/086.pdf"><em>Monte Carlo Tree Search Techniques in the Game of Kriegspiel</em></a> | IJCAI 2009 |
-| 2010 | <a href="https://doi.org/10.1109/TCIAIG.2010.2048711"><em>Progress through uncertainty in some Kriegspiel endings</em></a> | IEEE Transactions on Computational Intelligence and AI in Games |
-| 2010 | <a href="https://doi.org/10.1016/j.artint.2010.04.017"><em>Monte Carlo Tree Search in Kriegspiel</em></a> | Artificial Intelligence |
-| 2010 | <a href="https://cris.unibo.it/handle/11585/93683"><em>Retrograde analysis of Kriegspiel endgames</em></a> | IEEE Conference on Computational Intelligence and Games |
-| 2010 | <a href="https://cris.unibo.it/handle/11585/108400"><em>Algorithmic explorations of a well known wargame</em></a> | SING 2010 |
-| 2010 | <a href="https://doi.org/10.1016/j.tcs.2010.05.019"><em>Playing the perfect Kriegspiel endgame</em></a> | Theoretical Computer Science |
-| undated on page | <a href="https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/scacchierainvisibile.pdf"><em>La Scacchiera Invisibile</em></a> | Book manuscript in progress |
+| 1997 | [A Rational Approach to Kriegspiel](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/rational.pdf) | Advances in Computer Chess 8 |
+| 2003 | [Computer Programming of Kriegspiel Endings](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/endings.pdf) | Advances in Computer Games 10 |
+| 2004 | [Searching over Metapositions in Kriegspiel](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/metapositions.pdf) | Computer and Games 2004 |
+| 2007 | [Representing Kriegspiel States with Metapositions](https://www.ijcai.org/Proceedings/07/Papers/394.pdf) | IJCAI 2007 |
+| 2007 | [Moving in the Dark: Progress through Uncertainty in Kriegspiel](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/2007Amsterdam.pdf) | Computer Games Workshop 2007 |
+| 2007 | [A Program to Play Kriegspiel](https://doi.org/10.3233/ICG-2007-30102) | ICGA Journal |
+| 2009 | [Solving Kriegspiel endings with brute force: the case of KR vs. K](https://cris.unibo.it/handle/11585/83676) | Advances in Computer Games 12 |
+| 2009 | [Monte Carlo Tree Search Techniques in the Game of Kriegspiel](https://www.ijcai.org/Proceedings/09/Papers/086.pdf) | IJCAI 2009 |
+| 2010 | [Progress through uncertainty in some Kriegspiel endings](https://doi.org/10.1109/TCIAIG.2010.2048711) | IEEE Transactions on Computational Intelligence and AI in Games |
+| 2010 | [Monte Carlo Tree Search in Kriegspiel](https://doi.org/10.1016/j.artint.2010.04.017) | Artificial Intelligence |
+| 2010 | [Retrograde analysis of Kriegspiel endgames](https://cris.unibo.it/handle/11585/93683) | IEEE Conference on Computational Intelligence and Games |
+| 2010 | [Algorithmic explorations of a well known wargame](https://cris.unibo.it/handle/11585/108400) | SING 2010 |
+| 2010 | [Playing the perfect Kriegspiel endgame](https://doi.org/10.1016/j.tcs.2010.05.019) | Theoretical Computer Science |
+| undated on page | [La Scacchiera Invisibile](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/scacchierainvisibile.pdf) | Book manuscript in progress |
 
 ### Bologna theses and related academic work listed on the chess library page
 
 | Year | Author | Title |
 | --- | --- | --- |
-| 1993 | Francesco Maran | <a href="https://www.cs.unibo.it/~cianca/wwwpages/chesssite/Maran.pdf"><em>Razionalità Sostanziale e Procedurale nel Kriegspiel</em></a> |
-| 2002 | Marco Collareda | <a href="https://www.cs.unibo.it/~cianca/wwwpages/chesssite/collareda.pdf"><em>Progetto e Realizzazione di un programma cliente per Internet Chess Club</em></a> |
-| 2003 | Alessandro Bolognesi | <a href="https://www.cs.unibo.it/~cianca/wwwpages/chesssite/bolognesi.pdf"><em>Analisi e progettazione di un programma di gioco ad informazione imperfetta (Kriegspiel)</em></a> |
-| 2003 | Gian Piero Favini | <a href="https://www.cs.unibo.it/~cianca/wwwpages/chesssite/favini.pdf"><em>A Java Interface for Kriegspiel on ICC</em></a> |
-| 2006 | Gian Piero Favini | <a href="https://www.cs.unibo.it/~cianca/wwwpages/chesssite/favini2.pdf"><em>A program to play Kriegspiel</em></a> |
-| 2010 | Gian Piero Favini | <a href="https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf"><em>The dark side of the board: advances in chess Kriegspiel</em></a> |
+| 1993 | Francesco Maran | [Razionalità Sostanziale e Procedurale nel Kriegspiel](https://www.cs.unibo.it/~cianca/wwwpages/chesssite/Maran.pdf) |
+| 2002 | Marco Collareda | [Progetto e Realizzazione di un programma cliente per Internet Chess Club](https://www.cs.unibo.it/~cianca/wwwpages/chesssite/collareda.pdf) |
+| 2003 | Alessandro Bolognesi | [Analisi e progettazione di un programma di gioco ad informazione imperfetta (Kriegspiel)](https://www.cs.unibo.it/~cianca/wwwpages/chesssite/bolognesi.pdf) |
+| 2003 | Gian Piero Favini | [A Java Interface for Kriegspiel on ICC](https://www.cs.unibo.it/~cianca/wwwpages/chesssite/favini.pdf) |
+| 2006 | Gian Piero Favini | [A program to play Kriegspiel](https://www.cs.unibo.it/~cianca/wwwpages/chesssite/favini2.pdf) |
+| 2010 | Gian Piero Favini | [The dark side of the board: advances in chess Kriegspiel](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) |
 
 If you want one place to start, start with Favini's thesis. It is the closest thing we found to a single-document synthesis of the Bologna line.
 
@@ -122,9 +122,9 @@ Compared with Bologna, Berkeley's contribution looks less like a long program in
 
 | Year | Authors | Title | Venue or type |
 | --- | --- | --- | --- |
-| 1972 | C. S. Wetherell, T. J. Buckholtz, K. S. Booth | <a href="https://doi.org/10.1093/comjnl/15.1.66"><em>A Director for Kriegspiel, a Variant of Chess</em></a> | The Computer Journal |
-| 2005 | Stuart Russell, Jason Wolfe | <a href="https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf"><em>Efficient Belief-State AND-OR Search, with Application to Kriegspiel</em></a> | IJCAI 2005 |
-| 2007 | Jason Wolfe, Stuart Russell | <a href="https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf"><em>Exploiting Belief State Structure in Graph Search</em></a> | ICAPS Workshop on Planning in Games |
+| 1972 | C. S. Wetherell, T. J. Buckholtz, K. S. Booth | [A Director for Kriegspiel, a Variant of Chess](https://doi.org/10.1093/comjnl/15.1.66) | The Computer Journal |
+| 2005 | Stuart Russell, Jason Wolfe | [Efficient Belief-State AND-OR Search, with Application to Kriegspiel](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf) | IJCAI 2005 |
+| 2007 | Jason Wolfe, Stuart Russell | [Exploiting Belief State Structure in Graph Search](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf) | ICAPS Workshop on Planning in Games |
 
 The 1972 paper is worth calling out because it is an early Berkeley-connected systems paper about using programs as Kriegspiel directors. The Wolfe and Russell papers are the ones that feel closest to the modern AI framing: belief states, AND-OR search, and structured search in partially observable spaces.
 
@@ -147,8 +147,8 @@ The Bologna and Berkeley lines overlap, but they do not feel identical.
 If you want a reading order, this is the one we would suggest:
 
 1. Start with Anderson's *Are There Any?* if you want an older problem-book view of English Kriegspiel.
-2. Read Ferguson's <a href="https://www.math.ucla.edu/~tom/papers/ks.pdf"><em>Mate with bishop and knight in kriegspiel</em></a> for the UCLA mathematical line.
-3. Read Shapley's <a href="https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf"><em>The Invisible Chessboard</em></a> and Ferguson's <a href="https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf">Shapley note</a> for the RAND/UCLA bridge.
+2. Read Ferguson's [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf) for the UCLA mathematical line.
+3. Read Shapley's [The Invisible Chessboard](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) and Ferguson's [Shapley note](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) for the RAND/UCLA bridge.
 4. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
 5. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
 6. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
