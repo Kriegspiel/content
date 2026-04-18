@@ -1,7 +1,7 @@
 ---
 title: "A research map of Kriegspiel"
 slug: "kriegspiel-research-map"
-summary: "A compact guide to the main public research lines on Kriegspiel, from Anderson and UCLA to Bologna and Berkeley."
+summary: "A compact guide to public Kriegspiel research, key papers, and the academic history around the game."
 publishedAt: "2026-04-18"
 updatedAt: "2026-04-18"
 author: "Kriegspiel Team"
