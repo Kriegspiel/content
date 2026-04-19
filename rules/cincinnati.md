@@ -14,7 +14,7 @@ lastReviewedAt: "2026-04-18"
 ---
 These rules are based on David Moeser's article **"Kriegspiel - Cincinnati style"**, which reportedly appeared in the March 30, 1977 issue of *J'ADOUBE!*, *The Cincinnati Chess Magazine*.
 
-## Core Idea
+## Core idea
 
 In Cincinnati-style Kriegspiel, the player on move keeps trying moves until one is legal on the referee's board.
 
@@ -22,7 +22,7 @@ In Cincinnati-style Kriegspiel, the player on move keeps trying moves until one 
 - An illegal try is rejected and must be retracted.
 - Players may use tries not only to move, but also to learn something about the hidden position.
 
-## Official and Unofficial Pieces
+## Official and unofficial pieces
 
 Each player's own pieces are official.
 
@@ -36,7 +36,7 @@ The opponent's pieces are unofficial.
 - A player may move them around freely on her own board.
 - The referee must ignore all opposing-color pieces on a player's board, even if they are on impossible squares.
 
-## Touch Rule and Tries
+## Touch rule and tries
 
 The Cincinnati touch rule applies only to a player's own material.
 
@@ -46,7 +46,7 @@ The Cincinnati touch rule applies only to a player's own material.
 
 The recommended referee procedure is to wait until the player lets go of the piece before saying anything. That avoids disputes about whether the try was really intended.
 
-## Referee Procedure
+## Referee procedure
 
 After each legal move, and before the opponent starts the next turn, the referee:
 
@@ -56,9 +56,9 @@ After each legal move, and before the opponent starts the next turn, the referee
 
 All announcements must be heard by both players.
 
-## Referee Announcements
+## Referee announcements
 
-### Legal or Illegal Tries
+### Legal or illegal tries
 
 - If a try is legal, the referee announces that the player has moved, for example: `White has moved`, `Black has moved`, or simply `White`, `Black`.
 - If a try is illegal on the true board, the referee says `Illegal` or `No`.
@@ -86,7 +86,7 @@ If the move gives check, the referee announces both the fact of check and its di
 - `short diagonal`
 - `Knight`
 
-### Pawn Capture Announcement
+### Pawn capture announcement
 
 If at least one pawn of the player to move can legally capture something, the referee announces that the player has a `pawn capture`.
 
@@ -101,7 +101,7 @@ There is one important check exception: if the player is in check, and a pawn ca
 
 If a player tries a pawn capture when no pawn capture announcement applies, the referee says `Nonsense`.
 
-## What Is Not Announced
+## What is not announced
 
 - Piece captures by non-pawns are **not** announced in advance.
 - Pawn promotion is **not** announced.
@@ -110,7 +110,7 @@ If a player tries a pawn capture when no pawn capture announcement applies, the 
 
 Players should have promotion material available from the start for the same reason.
 
-## Source Note
+## Source note
 
 This page was taken from the reproduction in [*Wargaming the Far Future* (PDF)](https://connections-wargaming.com/wp-content/uploads/2021/01/2019-wargaming-the-far-future-final-20191105.pdf), because the original David Moeser article has not yet been found.
 
