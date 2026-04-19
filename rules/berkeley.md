@@ -1,5 +1,5 @@
 ---
-title: "Berkeley Kriegspiel Rules"
+title: "Berkeley kriegspiel rules"
 slug: "berkeley"
 summary: "Classic referee calls: No/Nonsense, capture square, directional checks."
 publishedAt: "2026-03-27"
