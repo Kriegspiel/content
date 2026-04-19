@@ -13,8 +13,6 @@ revision: "rules-wild16-r3"
 lastReviewedAt: "2026-04-19"
 changelogSlug: "2026-03-27-slice-940-trust-discoverability"
 ---
-# Wild 16 / ICC kriegspiel rules
-
 Wild 16 is the Internet Chess Club version of Kriegspiel: chess with hidden information. Each player sees only their own pieces. The referee or server sees the full position and decides whether attempted moves are legal.
 
 ## 1. Basic idea
