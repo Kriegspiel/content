@@ -14,6 +14,7 @@ draft: false
 
 # Rules
 - [Berkeley](/rules/berkeley)
+- [Cincinnati style](/rules/cincinnati)
 - [Wild 16](/rules/wild16)
 - [Comparison](/rules/comparison/)
 
