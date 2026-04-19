@@ -1,5 +1,5 @@
 ---
-title: "Cincinnati-Style Kriegspiel Rules"
+title: "Cincinnati-style kriegspiel rules"
 slug: "cincinnati"
 summary: "Historical public rules with legal tries, Illegal vs Nonsense, pawn-capture notices, and typed capture announcements."
 publishedAt: "2026-04-18"
