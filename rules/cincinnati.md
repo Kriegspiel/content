@@ -70,6 +70,6 @@ The following rules elaborate on certain prohibitions:
 
 ## Source note
 
-This page was taken from the reproduction in [Wargaming the Far Future (PDF)](https://connections-wargaming.com/wp-content/uploads/2021/01/2019-wargaming-the-far-future-final-20191105.pdf), because the original David Moeser article has not yet been found.
+This page was taken from the appendix in [La Scacchiera Invisibile (PDF)](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/scacchierainvisibile.pdf), because the original David Moeser article has not yet been found.
 
 Please email [any@kriegspiel.org](mailto:any@kriegspiel.org) if you have the original article or a better source for it.
