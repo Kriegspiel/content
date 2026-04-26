@@ -8,8 +8,8 @@ author: "Kriegspiel Team"
 tags: ["rules", "rand", "historical"]
 draft: false
 lifecycle: published
-version: "1.0.0"
-revision: "rules-rand-r1"
+version: "1.0.1"
+revision: "rules-rand-r2"
 lastReviewedAt: "2026-04-26"
 ---
 
@@ -79,4 +79,4 @@ Standard chess rules apply, with the following additions and elucidations.
 
 20. For ladder games, the stalemate rule is currently modified: the stalemated player loses.
 
-*Original source: J. D. Williams, "Kriegsspiel rules at RAND", 1950.*
+*Original source: J. D. Williams, "Kriegsspiel rules at RAND", 1950. Via Paolo Ciancarini's [La Scacchiera Invisibile](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/scacchierainvisibile.pdf).*
