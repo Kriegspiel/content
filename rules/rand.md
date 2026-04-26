@@ -1,7 +1,7 @@
 ---
 title: "RAND"
 slug: "rand"
-summary: "J. D. Williams's 1950 RAND rules: pawn-try squares, typed captures, promotion announcements, and rebuff counts."
+summary: "J. D. Williams's 1950 RAND reference: pawn-try squares, typed captures, promotion announcements, and rebuff counts."
 publishedAt: "2026-04-26"
 updatedAt: "2026-04-26"
 author: "Kriegspiel Team"
