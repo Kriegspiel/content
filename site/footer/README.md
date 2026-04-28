@@ -3,7 +3,7 @@ title: "Footer"
 slug: "footer"
 summary: "Canonical footer content and link grouping for kriegspiel.org."
 publishedAt: "2026-03-29"
-updatedAt: "2026-04-26"
+updatedAt: "2026-04-28"
 author: "Kriegspiel Team"
 tags: ["site", "footer", "navigation"]
 draft: false
@@ -17,6 +17,7 @@ draft: false
 - [Cincinnati](/rules/cincinnati)
 - [Wild 16](/rules/wild16)
 - [RAND](/rules/rand)
+- [CrazyKrieg](/rules/crazykrieg)
 - [Comparison](/rules/comparison/)
 
 # Communication
