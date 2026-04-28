@@ -266,4 +266,4 @@ After promotion:
 
 ## Source note
 
-This page summarizes original-style CrazyKrieg, also called Crazyhouse Kriegspiel, and uses the historical [Chess Variant Pages Crazyhouse Kriegspiel entry](https://ftp.chessvariants.com/incinf.dir/crazyhousekriegspiel.html), standard [Kriegspiel referee-announcement rules](https://en.wikipedia.org/wiki/Kriegspiel_%28chess%29), and standard [Crazyhouse reserve/drop rules](https://lichess.org/variant/crazyhouse) as references.
+This page summarizes original-style CrazyKrieg, also called Crazyhouse Kriegspiel, and uses the historical [Chess Variant Pages Crazyhouse Kriegspiel entry](https://www.chessvariants.org/incinf.dir/crazyhousekriegspiel.html), standard [Kriegspiel referee-announcement rules](https://en.wikipedia.org/wiki/Kriegspiel_%28chess%29), and standard [Crazyhouse reserve/drop rules](https://lichess.org/variant/crazyhouse) as references.
