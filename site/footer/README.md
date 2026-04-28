@@ -17,6 +17,7 @@ draft: false
 - [Cincinnati](/rules/cincinnati)
 - [Wild 16](/rules/wild16)
 - [RAND](/rules/rand)
+- [English](/rules/english)
 - [CrazyKrieg](/rules/crazykrieg)
 - [Comparison](/rules/comparison/)
 
