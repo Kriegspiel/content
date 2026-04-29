@@ -1,5 +1,5 @@
 ---
-title: "CrazyKrieg / Crazyhouse Kriegspiel rules"
+title: "CrazyKrieg / Crazyhouse kriegspiel rules"
 slug: "crazykrieg"
 summary: "Crazyhouse mixed with Kriegspiel: hidden board, public reserves, typed captures, and secret drop squares."
 publishedAt: "2026-04-28"
@@ -13,7 +13,7 @@ revision: "rules-crazykrieg-r2"
 lastReviewedAt: "2026-04-29"
 ---
 
-CrazyKrieg, also known as Crazyhouse Kriegspiel, combines Kriegspiel with Crazyhouse. It is played like normal Kriegspiel, except captured pieces go into the capturer's reserve and may later be dropped back onto the board.
+CrazyKrieg, also known as Crazyhouse kriegspiel, combines Kriegspiel with Crazyhouse. It is played like normal Kriegspiel, except captured pieces go into the capturer's reserve and may later be dropped back onto the board.
 
 The original Chess Variant Pages description combines Crazyhouse with Kriegspiel and adds the key reserve-tracking rule: when something is captured, the referee announces which piece or pawn has been removed so both players can track reserves.
 
@@ -264,4 +264,4 @@ After promotion:
 
 ## Source note
 
-This page summarizes original-style CrazyKrieg, also called Crazyhouse Kriegspiel, using the historical [Chess Variant Pages Crazyhouse Kriegspiel entry](https://www.chessvariants.org/incinf.dir/crazyhousekriegspiel.html), standard [Kriegspiel referee-announcement rules](https://en.wikipedia.org/wiki/Kriegspiel_%28chess%29), and standard [Crazyhouse reserve/drop rules](https://lichess.org/variant/crazyhouse) as references.
+This page summarizes original-style CrazyKrieg, also called Crazyhouse kriegspiel, using the historical [Chess Variant Pages Crazyhouse Kriegspiel entry](https://www.chessvariants.org/incinf.dir/crazyhousekriegspiel.html), standard [Kriegspiel referee-announcement rules](https://en.wikipedia.org/wiki/Kriegspiel_%28chess%29), and standard [Crazyhouse reserve/drop rules](https://lichess.org/variant/crazyhouse) as references.
