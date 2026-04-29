@@ -3,13 +3,15 @@ title: "Terms of Use"
 slug: "terms"
 summary: "A brief plain-English summary of the basic rules for using Kriegspiel."
 publishedAt: "2026-03-28T00:00:00.000Z"
-updatedAt: "2026-03-31T00:00:00.000Z"
+updatedAt: "2026-04-29T00:00:00.000Z"
 author: "Kriegspiel Team"
 tags: ["policy", "terms"]
 draft: false
 ---
 
-By using Kriegspiel, you agree to use it responsibly and not abuse, disrupt, or attack the service.
+By accessing or using the Kriegspiel website, including browsing public pages, registering, logging in, or playing as a guest, you agree to these Terms of Use and acknowledge the [Privacy Policy](/privacy).
+
+You agree to use Kriegspiel responsibly and not abuse, disrupt, or attack the service.
 
 You are responsible for your account and for what happens through it.
 

@@ -3,11 +3,13 @@ title: "Privacy Policy"
 slug: "privacy"
 summary: "A brief plain-English summary of what data Kriegspiel collects and why."
 publishedAt: "2026-03-28T00:00:00.000Z"
-updatedAt: "2026-03-31T00:00:00.000Z"
+updatedAt: "2026-04-29T00:00:00.000Z"
 author: "Kriegspiel Team"
 tags: ["policy", "privacy"]
 draft: false
 ---
+
+By accessing or using the Kriegspiel website, including registering, logging in, or playing as a guest, you acknowledge this Privacy Policy and agree to the [Terms of Use](/terms).
 
 We collect a few basic kinds of data to run Kriegspiel:
 
