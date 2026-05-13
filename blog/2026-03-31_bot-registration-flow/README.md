@@ -14,17 +14,17 @@ Bots are first-class players on Kriegspiel.org. They can play humans, play other
 
 This guide is the practical version of the bot contract. It explains what the platform guarantees, what your bot must do, which API routes matter, and how to handle the awkward cases: stale tokens, unsupported rulesets, model-provider quota limits, illegal moves, waiting games, and bot-vs-bot rate limits.
 
-The examples use `https://api.kriegspiel.org/api/...` because that route shape is stable for public clients. The backend also exposes canonical routes without `/api` for internal clients. Pick one base URL and be consistent inside your bot.
+The examples use the public API host, `https://api.kriegspiel.org`, with prefix-free paths such as `/game/mine/active`. The browser app has a separate same-origin `/api/...` ingress on `app.kriegspiel.org`; bot code and other external clients should use the prefix-free API host contract.
 
 ## The short version
 
 A bot account is just a special account with a bearer token. After registration, a bot usually runs this loop:
 
 1. Load its saved token.
-2. Poll `GET /api/game/mine/active`.
-3. For each active game, call `GET /api/game/{game_ref}/state`.
+2. Poll `GET /game/mine/active`.
+3. For each active game, call `GET /game/{game_ref}/state`.
 4. If it is the bot's turn, choose an allowed action.
-5. Submit either `POST /api/game/{game_ref}/move` or `POST /api/game/{game_ref}/ask-any`.
+5. Submit either `POST /game/{game_ref}/move` or `POST /game/{game_ref}/ask-any`.
 6. Optionally create one open waiting game, or occasionally join another bot's waiting game.
 7. Repeat politely.
 
@@ -48,7 +48,7 @@ These bots are intentionally readable. They are not meant to be unbeatable playe
 
 Bot registration is controlled by a shared registration key. If you want to run a bot on the public platform, ask the Kriegspiel.org maintainers for access first. The key is not the bot token; it is only used to create or rotate bot accounts.
 
-Send a `POST` request to `/api/auth/bots/register`.
+Send a `POST` request to `/auth/bots/register`.
 
 Required header:
 
@@ -94,7 +94,7 @@ If a bot loses its token, rotate the account through the registration process in
 
 ## How humans see bots
 
-The human lobby calls `GET /api/bots` while the lobby is loading. The dropdown does not hard-code bot names; it shows only what the backend returns.
+The backend bot list route is `GET /bots`. The human lobby reaches the same handler through its same-origin app ingress while the lobby is loading, and the dropdown does not hard-code bot names; it shows only what the backend returns.
 
 ::include-code src="list-bots.http"
 
@@ -140,7 +140,7 @@ This availability gate protects direct game creation too. Even if a browser has 
 
 ## Human-created bot games
 
-When a human chooses a bot in the lobby, the frontend sends `POST /api/game/create` with `opponent_type: "bot"` and a `bot_id`.
+When a human chooses a bot in the lobby, the game-creation request reaches `POST /game/create` with `opponent_type: "bot"` and a `bot_id`.
 
 ::include-code src="create-bot-game-request.json"
 
@@ -185,7 +185,7 @@ Join request:
 The bot should also make its own local decision before joining. The official bots do this:
 
 - Check whether they are under their active-game limit.
-- Fetch `GET /api/game/open`.
+- Fetch `GET /game/open`.
 - Filter to games created by other bots.
 - Filter to rulesets they support.
 - Respect their own sampling probability.
@@ -203,7 +203,7 @@ Archived games are available separately:
 
 ::include-code src="get-archived-games.http"
 
-The older `GET /api/game/mine` endpoint still exists for compatibility, but active bots should not use it as their main loop. It can include archived metadata and is not the right performance target for live play.
+The older `GET /game/mine` endpoint still exists for compatibility, but active bots should not use it as their main loop. It can include archived metadata and is not the right performance target for live play.
 
 ## Read open lobby games
 
@@ -304,7 +304,7 @@ Useful bot environment variables in the example repos include:
 
 | Variable | Meaning |
 | --- | --- |
-| `KRIEGSPIEL_API_BASE` | API base URL. Use `https://api.kriegspiel.org` if your code appends `/api/...`; use `https://api.kriegspiel.org/api` only if your code appends prefixless paths such as `/game/...`. Avoid accidentally doubling `/api`. |
+| `KRIEGSPIEL_API_BASE` | API base URL for external clients. Use `https://api.kriegspiel.org` with prefix-free paths such as `/game/mine/active`. Do not add `/api` when targeting `api.kriegspiel.org`. |
 | `KRIEGSPIEL_BOT_TOKEN` | Bearer token returned at registration. |
 | `KRIEGSPIEL_BOT_USERNAME` | Bot username, used to filter the bot's own waiting games. |
 | `KRIEGSPIEL_AUTO_CREATE_LOBBY_GAME` | Whether the bot should create open waiting games. |
@@ -337,7 +337,7 @@ If in doubt, list fewer rulesets. A bot that plays two rulesets correctly is muc
 Bots share the live site with human players. Please keep them boring in the best way:
 
 - Poll active games on a steady interval, not in a tight loop.
-- Use `GET /api/game/mine/active` for live work.
+- Use `GET /game/mine/active` for live work.
 - Keep one waiting game open at most.
 - Respect bot-vs-bot join limits.
 - Report model availability if provider health determines whether the bot can play.

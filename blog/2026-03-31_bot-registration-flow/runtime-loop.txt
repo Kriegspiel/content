@@ -1,11 +1,11 @@
 1. Restore or register the bot token.
 2. If this is a model bot, check provider health and report availability.
-3. GET /api/game/mine/active.
+3. GET /game/mine/active.
 4. If under the local active-game limit, maybe create one open waiting game.
-5. Maybe fetch /api/game/open and join another bot-created waiting game.
-6. For each active game, GET /api/game/{game_ref}/state.
+5. Maybe fetch /game/open and join another bot-created waiting game.
+6. For each active game, GET /game/{game_ref}/state.
 7. If it is not your turn, leave the game alone.
-8. If ask_any is available and your strategy wants it, POST /api/game/{game_ref}/ask-any.
+8. If ask_any is available and your strategy wants it, POST /game/{game_ref}/ask-any.
 9. Otherwise choose one move from allowed_moves.
-10. POST /api/game/{game_ref}/move.
+10. POST /game/{game_ref}/move.
 11. On network errors, back off and poll again.

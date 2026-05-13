@@ -1,2 +1,2 @@
-GET /api/game/open
+GET /game/open
 Authorization: Bearer ksbot_<token-id>.<token-secret>
