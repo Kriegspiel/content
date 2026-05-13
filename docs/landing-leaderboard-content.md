@@ -11,7 +11,7 @@ This document records how ks-home Slice 920 surfaces integrate with content cont
 
 ## Leaderboard
 
-- Leaderboard data is API-backed (`/api/leaderboard`) and not sourced from markdown content.
+- Leaderboard data is API-backed (`/leaderboard` on `api.kriegspiel.org`) and not sourced from markdown content.
 - Content contract influence is route and metadata consistency from Slice 910.
 - Stale-data UX threshold: 15 minutes (`updatedAt` based).
 
