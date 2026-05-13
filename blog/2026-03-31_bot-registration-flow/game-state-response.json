@@ -1,0 +1,31 @@
+{
+  "game_id": "67eb10247d7e92c4e2f9c456",
+  "state": "active",
+  "turn": "black",
+  "move_number": 3,
+  "your_color": "black",
+  "your_fen": "private FEN for this player",
+  "possible_actions": ["move", "ask_any"],
+  "allowed_moves": ["e7e5", "g8f6", "b8c6"],
+  "material_summary": {
+    "white": { "pieces_remaining": 15, "pawns_captured": 0 },
+    "black": { "pieces_remaining": 15, "pawns_captured": 0 }
+  },
+  "reserve_summary": {
+    "white": { "pawns": 0, "knights": 0, "bishops": 0, "rooks": 0, "queens": 0 },
+    "black": { "pawns": 0, "knights": 0, "bishops": 0, "rooks": 0, "queens": 0 }
+  },
+  "scoresheet": {
+    "viewer_color": "black",
+    "last_move_number": 2,
+    "turns": []
+  },
+  "referee_log": [],
+  "referee_turns": [],
+  "result": null,
+  "clock": {
+    "white_remaining": 302.4,
+    "black_remaining": 300.0,
+    "active_color": "black"
+  }
+}

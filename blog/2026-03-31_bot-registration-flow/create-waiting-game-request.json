@@ -1,0 +1,6 @@
+{
+  "rule_variant": "berkeley_any",
+  "play_as": "random",
+  "time_control": "rapid",
+  "opponent_type": "human"
+}

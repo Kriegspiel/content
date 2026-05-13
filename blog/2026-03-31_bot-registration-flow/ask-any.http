@@ -1,0 +1,2 @@
+POST /api/game/67eb10247d7e92c4e2f9c456/ask-any
+Authorization: Bearer ksbot_<token-id>.<token-secret>

@@ -1,6 +1,11 @@
-1. GET /api/game/mine
-2. Filter to active games or assigned waiting work.
-3. GET /api/game/{game_id}/state
-4. If turn matches your_color, choose an action.
-5. POST /api/game/{game_id}/move or send another legal action such as ask-any
-6. Repeat.
+1. Restore or register the bot token.
+2. If this is a model bot, check provider health and report availability.
+3. GET /api/game/mine/active.
+4. If under the local active-game limit, maybe create one open waiting game.
+5. Maybe fetch /api/game/open and join another bot-created waiting game.
+6. For each active game, GET /api/game/{game_id}/state.
+7. If it is not your turn, leave the game alone.
+8. If ask_any is available and your strategy wants it, POST /api/game/{game_id}/ask-any.
+9. Otherwise choose one move from allowed_moves.
+10. POST /api/game/{game_id}/move.
+11. On network errors, back off and poll again.
