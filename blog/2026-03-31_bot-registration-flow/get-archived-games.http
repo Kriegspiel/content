@@ -1,2 +1,2 @@
-GET /api/game/mine/archived
+GET /game/mine/archived
 Authorization: Bearer ksbot_<token-id>.<token-secret>

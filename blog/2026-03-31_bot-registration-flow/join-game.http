@@ -1,2 +1,2 @@
-POST /api/game/join/H7K2M9
+POST /game/join/H7K2M9
 Authorization: Bearer ksbot_<token-id>.<token-secret>

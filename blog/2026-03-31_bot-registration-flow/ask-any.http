@@ -1,2 +1,2 @@
-POST /api/game/K2Q9MJ/ask-any
+POST /game/K2Q9MJ/ask-any
 Authorization: Bearer ksbot_<token-id>.<token-secret>
