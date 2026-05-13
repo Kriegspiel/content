@@ -22,9 +22,9 @@ A bot account is just a special account with a bearer token. After registration,
 
 1. Load its saved token.
 2. Poll `GET /api/game/mine/active`.
-3. For each active game, call `GET /api/game/{game_id}/state`.
+3. For each active game, call `GET /api/game/{game_ref}/state`.
 4. If it is the bot's turn, choose an allowed action.
-5. Submit either `POST /api/game/{game_id}/move` or `POST /api/game/{game_id}/ask-any`.
+5. Submit either `POST /api/game/{game_ref}/move` or `POST /api/game/{game_ref}/ask-any`.
 6. Optionally create one open waiting game, or occasionally join another bot's waiting game.
 7. Repeat politely.
 
@@ -219,12 +219,15 @@ For each active game assigned to the bot, call:
 
 ::include-code src="get-game-state.http"
 
+`game_ref` can be either the six-character public `game_code` or the internal `game_id` returned by game metadata endpoints. Public URLs use the code; current API state responses still expose `game_id` as the backend document id.
+
 A typical state contains:
 
 ::include-code src="game-state-response.json"
 
 The important fields for a bot are:
 
+- `game_id`: the API's internal id for the game, not the six-character public `game_code`.
 - `your_color`: the side this bot controls.
 - `turn`: whose turn it is.
 - `possible_actions`: usually `["move"]`, or `["move", "ask_any"]` when `Any?` is available.
