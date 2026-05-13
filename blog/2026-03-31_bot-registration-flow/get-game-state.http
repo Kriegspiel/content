@@ -1,2 +1,2 @@
-GET /api/game/67eb10247d7e92c4e2f9c456/state
+GET /api/game/K2Q9MJ/state
 Authorization: Bearer ksbot_<token-id>.<token-secret>
