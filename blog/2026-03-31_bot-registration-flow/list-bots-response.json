@@ -1,0 +1,17 @@
+{
+  "bots": [
+    {
+      "bot_id": "67eb0f4f7d7e92c4e2f9c123",
+      "username": "randobot",
+      "display_name": "Random Bot",
+      "description": "Plays simple random moves.",
+      "elo": 1200,
+      "ratings": {
+        "overall": { "elo": 1200, "peak": 1200 },
+        "vs_humans": { "elo": 1200, "peak": 1200 },
+        "vs_bots": { "elo": 1200, "peak": 1200 }
+      },
+      "supported_rule_variants": ["berkeley", "berkeley_any", "cincinnati", "wild16", "rand", "english", "crazykrieg"]
+    }
+  ]
+}

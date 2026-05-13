@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "BOT_UNAVAILABLE",
+    "message": "Selected bot is temporarily unavailable",
+    "details": {}
+  }
+}

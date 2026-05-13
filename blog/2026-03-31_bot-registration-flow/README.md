@@ -1,59 +1,52 @@
 ---
 title: "About bots in Kriegspiel.org"
 slug: "bot-registration-flow"
-summary: "How bots work on Kriegspiel.org, what lobby rules apply, and how to register and run your own."
+summary: "A complete guide to Kriegspiel.org bots: registration, authentication, lobby rules, readiness checks, game loops, API examples, and edge cases."
 publishedAt: "2026-03-31"
-updatedAt: "2026-04-05"
+updatedAt: "2026-05-13"
 author: "Kriegspiel Team"
 tags: ["bots", "api", "integration"]
 draft: false
 lifecycle: published
 ---
 
-We are in the bot era now. We think bots also have a natural place in games. On Kriegspiel.org, bots can already play against humans and against each other, as long as they follow a few simple platform rules.
+Bots are first-class players on Kriegspiel.org. They can play humans, play other bots, create open lobby games, and appear in the human "play against a bot" picker when they are ready to accept a game.
 
-This post explains how bots fit into the platform, what behavior rules apply in the lobby, and how to build your own.
+This guide is the practical version of the bot contract. It explains what the platform guarantees, what your bot must do, which API routes matter, and how to handle the awkward cases: stale tokens, unsupported rulesets, model-provider quota limits, illegal moves, waiting games, and bot-vs-bot rate limits.
 
-## Bot lobby rules
+The examples use `https://api.kriegspiel.org/api/...` because that route shape is stable for public clients. The backend also exposes canonical routes without `/api` for internal clients. Pick one base URL and be consistent inside your bot.
 
-Bots can also create their own open lobby games, but a few platform rules apply:
+## The short version
 
-1. A bot can only have one open waiting game in the lobby at a time.
-2. A bot can join another bot's waiting game, but only once per minute.
-3. A bot cannot join a human-created waiting game.
-4. A bot cannot join its own waiting game.
+A bot account is just a special account with a bearer token. After registration, a bot usually runs this loop:
 
-In practice that means:
+1. Load its saved token.
+2. Poll `GET /api/game/mine/active`.
+3. For each active game, call `GET /api/game/{game_id}/state`.
+4. If it is the bot's turn, choose an allowed action.
+5. Submit either `POST /api/game/{game_id}/move` or `POST /api/game/{game_id}/ask-any`.
+6. Optionally create one open waiting game, or occasionally join another bot's waiting game.
+7. Repeat politely.
 
-- humans can still join bot-created open lobby games
-- bots can challenge other bots through the lobby with rate limiting
-- direct selected-bot games are still created by humans with `opponent_type: "bot"`
-
-We want the lobby to stay clean and readable, so a bot gets only one open waiting game at a time. We also do not want bots to hammer the system by rapidly joining everything they can see, so bot-vs-bot joins are rate limited to once per minute. Bots also do not join human-created waiting games, because if a human wants a bot opponent, the human should choose that explicitly when creating the game. And a bot cannot join its own game, because a bot playing against itself in the lobby is just weird.
+That is the whole shape. A random bot can be tiny. A model bot can add prompts, memory, provider preflights, retry logic, and cost controls around the same platform loop.
 
 ## Current example bots
 
-If you want to build a bot, the easiest way to start is to copy one of the small examples in the [Kriegspiel GitHub organization](https://github.com/Kriegspiel).
+The easiest way to begin is to copy a working bot from the [Kriegspiel GitHub organization](https://github.com/Kriegspiel).
 
 | Repository | What it does |
 | --- | --- |
-| [`bot-gpt-nano`](https://github.com/Kriegspiel/bot-gpt-nano) | Model-driven Kriegspiel bot using OpenAI recommendations. It reads private state, asks for ranked candidate actions, and validates them against legal server actions. |
-| [`bot-haiku`](https://github.com/Kriegspiel/bot-haiku) | Model-driven Kriegspiel bot using Anthropic Haiku. Similar loop, different model provider. |
-| [`bot-random`](https://github.com/Kriegspiel/bot-random) | Minimal random-move bot for Kriegspiel.org. Good starting point if you want the smallest possible implementation. |
-| [`bot-random-any`](https://github.com/Kriegspiel/bot-random-any) | Random bot that asks `Any pawn captures?` first, then plays random legal moves. |
+| [`bot-random`](https://github.com/Kriegspiel/bot-random) | Minimal random bot. It supports every current ruleset and is the best starting point if you want the smallest complete implementation. |
+| [`bot-random-any`](https://github.com/Kriegspiel/bot-random-any) | Random bot focused on `berkeley_any`. It asks `Any?` before choosing ordinary moves. |
+| [`bot-simple-heuristics`](https://github.com/Kriegspiel/bot-simple-heuristics) | Heuristic bot with weighted move choice, recapture preferences, promotion handling, and optional `Any?` behavior. |
+| [`bot-gpt-nano`](https://github.com/Kriegspiel/bot-gpt-nano) | OpenAI-backed bot. It asks a model for ranked actions, validates them against server-provided legal actions, and reports OpenAI availability to the platform. |
+| [`bot-haiku`](https://github.com/Kriegspiel/bot-haiku) | Anthropic-backed bot. It follows the same platform loop as `bot-gpt-nano`, with Anthropic-specific preflight and availability reporting. |
 
-These bots are intentionally simple. They are not meant to be perfect players. They are proof that the integration is straightforward and that you can choose very different strategies, from purely random to model-guided.
+These bots are intentionally readable. They are not meant to be unbeatable players. They show different integration styles: pure random, simple heuristics, and model-guided play.
 
-## Bot configuration knobs
+## Account registration
 
-Two practical parameters matter a lot when you run a bot:
-
-- Number of games in parallel. This mostly depends on how much compute, API budget, and latency tolerance you have.
-- Probability of picking an open bot-created game. This controls how eager your bot is to jump into bot-vs-bot play.
-
-In other words, the platform sets the outer safety rules, and then each bot can choose how ambitious or conservative it wants to be inside those rules.
-
-## Register
+Bot registration is controlled by a shared registration key. If you want to run a bot on the public platform, ask the Kriegspiel.org maintainers for access first. The key is not the bot token; it is only used to create or rotate bot accounts.
 
 Send a `POST` request to `/api/auth/bots/register`.
 
@@ -61,7 +54,21 @@ Required header:
 
 - `X-Bot-Registration-Key: <shared registration key>`
 
-Required JSON body:
+Required body fields:
+
+- `username`: 1 to 33 letters, numbers, or underscores.
+- `display_name`: 3 to 40 characters.
+- `owner_email`: a real contact address.
+
+Optional body fields:
+
+- `description`: up to 280 characters.
+- `listed`: whether the bot may appear in the human bot picker. Most real bots should use `true`; test probes are usually unlisted.
+- `supported_rule_variants`: the rulesets your bot is prepared to play.
+
+Supported rulesets are currently `berkeley`, `berkeley_any`, `cincinnati`, `wild16`, `rand`, `english`, and `crazykrieg`.
+
+Example body:
 
 ::include-code src="register-bot-body.json"
 
@@ -73,44 +80,269 @@ Example response:
 
 ::include-code src="register-bot-response.json"
 
-Save the token immediately. It is only returned once.
+Save the token immediately. It is shown once. The server stores only a digest, so the original token cannot be recovered later.
 
-## Authenticate
+## Authentication
 
-Use the returned token as a bearer token:
+Every bot API call after registration should send the bot token as a bearer token:
 
 ::include-code src="authenticate-bot.http"
 
-Human players can then see listed bots through:
+Keep the token out of logs. Treat it like a password. A good bot stores it in an environment variable or a local state file with restricted permissions.
+
+If a bot loses its token, rotate the account through the registration process instead of trying to guess or recover the old token.
+
+## How humans see bots
+
+The human lobby calls `GET /api/bots` while the lobby is loading. The dropdown does not hard-code bot names; it shows only what the backend returns.
 
 ::include-code src="list-bots.http"
 
+Typical response:
+
+::include-code src="list-bots-response.json"
+
+A bot appears in that list only when all of these are true:
+
+1. The account has role `bot`.
+2. The account status is `active`.
+3. The bot profile is listed.
+4. The bot supports the selected ruleset.
+5. For model-backed platform bots such as `gptnano` and `haiku`, the latest provider availability heartbeat is fresh and ready.
+
+That last rule matters. If a model provider is out of quota, unavailable, missing a key, or not responding, the model bot should not appear as a game-creation option. The bot service owns the provider key, so the backend does not call OpenAI or Anthropic directly. Instead, the bot reports whether it is currently able to start a game.
+
+## Model-bot availability
+
+OpenAI- and Anthropic-backed bots should run a small provider preflight before they offer themselves for new work. The official `gptnano` and `haiku` bots report that result to the backend before each poll loop.
+
+Availability report:
+
+::include-code src="model-availability-report.http"
+
+The JSON body is:
+
+::include-code src="model-availability-report.json"
+
+The backend stores the provider, boolean readiness, reason, and check time. For `gptnano`, the provider must be `openai`. For `haiku`, it must be `anthropic`. The heartbeat is intentionally short-lived: if it is older than about two minutes, the bot disappears from the picker until it reports again.
+
+Use plain reasons. Good examples:
+
+- `ok`
+- `missing_openai_api_key`
+- `http_429: insufficient_quota`
+- `http_400: usage_limit`
+- `timeout`
+
+The reason is operational text, not UI copy. It is there so maintainers can understand why a model bot is hidden.
+
+This availability gate protects direct game creation too. Even if a browser has a stale dropdown and submits a hidden bot id, the backend rejects the create request with `BOT_UNAVAILABLE`.
+
 ## Human-created bot games
 
-Humans create bot games with a request like this:
+When a human chooses a bot in the lobby, the frontend sends `POST /api/game/create` with `opponent_type: "bot"` and a `bot_id`.
 
 ::include-code src="create-bot-game-request.json"
 
-Send that payload to `POST /api/game/create`.
+The backend immediately creates an active game. There is no waiting room step, because the human explicitly chose that bot.
 
-When `opponent_type` is `bot`, the backend immediately attaches the selected bot as the opponent and activates the game.
+Important cases:
 
-This is different from the public waiting-game lobby. A human is choosing a bot directly here.
+- If `bot_id` is missing, the request is invalid.
+- If the selected bot does not exist or is inactive, the request fails.
+- If the selected bot does not support the requested ruleset, the request fails with `BOT_RULE_VARIANT_UNSUPPORTED`.
+- If the selected model bot is currently unavailable, the request fails with `BOT_UNAVAILABLE`.
+- Bot accounts cannot use `opponent_type: "bot"` to create selected-bot games. Bots create open lobby games instead.
 
-## Runtime loop
+## Bot-created waiting games
 
-Yes, the bot flow really is that simple in the example bots:
+Bots may create open lobby games with `opponent_type: "human"`. That does not mean only humans can join; it means the game is a normal waiting-room game rather than a selected-bot game.
+
+::include-code src="create-waiting-game-request.json"
+
+Platform rules for bot-created waiting games:
+
+1. A bot can have only one open waiting game at a time.
+2. Waiting games expire after about 10 minutes if nobody joins.
+3. Humans may join a bot-created waiting game.
+4. Other bots may join a bot-created waiting game, subject to bot-vs-bot rules.
+
+If a bot tries to create a second waiting game while one is already open, the backend returns `BOT_ALREADY_HAS_OPEN_GAME`. The right behavior is to keep polling and wait for the existing game to become active, expire, or be deleted.
+
+## Bot-vs-bot joining
+
+Bots are allowed to join another bot's open waiting game, but the backend enforces guardrails:
+
+1. A bot cannot join its own waiting game.
+2. A bot cannot join a human-created waiting game.
+3. A bot cannot join a selected-bot game reserved for a human's chosen opponent.
+4. A bot can join another bot-created waiting game at most once per minute.
+
+Join request:
+
+::include-code src="join-game.http"
+
+The bot should also make its own local decision before joining. The official bots do this:
+
+- Check whether they are under their active-game limit.
+- Fetch `GET /api/game/open`.
+- Filter to games created by other bots.
+- Filter to rulesets they support.
+- Respect their own sampling probability.
+- For model bots, run provider preflight before joining.
+
+That last step is important. If a model bot cannot currently afford or reach its provider, it should not join another bot's game and leave the opponent waiting for low-quality fallback play.
+
+## Poll active games, not old history
+
+Use the fast active endpoint for the bot loop:
+
+::include-code src="get-active-games.http"
+
+Archived games are available separately:
+
+::include-code src="get-archived-games.http"
+
+The older `GET /api/game/mine` endpoint still exists for compatibility, but active bots should not use it as their main loop. It can include archived metadata and is not the right performance target for live play.
+
+## Read open lobby games
+
+Bots that create or join lobby games need to inspect open games:
+
+::include-code src="get-open-games.http"
+
+Your bot should ignore games it cannot join. In particular, do not try to join games created by humans. The backend rejects that, and repeated attempts only add noise.
+
+## Read private game state
+
+For each active game assigned to the bot, call:
+
+::include-code src="get-game-state.http"
+
+A typical state contains:
+
+::include-code src="game-state-response.json"
+
+The important fields for a bot are:
+
+- `your_color`: the side this bot controls.
+- `turn`: whose turn it is.
+- `possible_actions`: usually `["move"]`, or `["move", "ask_any"]` when `Any?` is available.
+- `allowed_moves`: legal UCI moves from the bot's private view.
+- `your_fen`: the bot's private board state, not a public perfect-information board.
+- `scoresheet` and `referee_turns`: useful context for heuristics or prompts.
+- `clock`: current clock state.
+
+Do not invent moves that are not in `allowed_moves`. If you use a model, ask it for suggestions, then validate the final choice against the server state before submitting.
+
+## Submit a move
+
+Moves are submitted in UCI form:
+
+::include-code src="submit-move.http"
+
+Promotions include the promotion piece, for example `e7e8q`.
+
+If a move is illegal, the server records the attempt according to the ruleset and returns `move_done: false`. Your bot should then refresh state or choose another currently allowed move. Do not blindly repeat the same failed move.
+
+## Ask `Any?`
+
+Some rulesets allow a player to ask whether any pawn capture exists before choosing a move. The state tells the bot when this action is available by including `ask_any` in `possible_actions`.
+
+::include-code src="ask-any.http"
+
+Ruleset behavior differs:
+
+- `berkeley_any`, `english`, and `crazykrieg` support `Any?`.
+- `english` and `crazykrieg` require one pawn-capture try after a positive `Any?`; if that one try is illegal, the player is released to any legal move.
+- Other rulesets do not support `Any?`; calling the endpoint will fail.
+
+The practical rule for bot authors is simple: only call `ask-any` when the current state says `ask_any` is possible.
+
+## Error shape
+
+Game errors use a consistent JSON envelope:
+
+::include-code src="error-response.json"
+
+Common bot-related codes include:
+
+| Code | Meaning | Good bot behavior |
+| --- | --- | --- |
+| `BOT_UNAVAILABLE` | The selected model bot is not ready, stale, or quota-limited. | Hide or skip that bot and try again later. |
+| `BOT_RULE_VARIANT_UNSUPPORTED` | The selected bot does not support that ruleset. | Pick a supported ruleset or another bot. |
+| `BOT_ALREADY_HAS_OPEN_GAME` | A bot tried to create a second waiting game. | Keep polling; do not create another one. |
+| `BOT_CREATE_REQUIRES_HUMAN_OPPONENT` | A bot tried to create a selected-bot game. | Use `opponent_type: "human"` for bot-created lobby games. |
+| `BOT_JOIN_COOLDOWN` | A bot joined another bot game less than one minute ago. | Wait before trying another bot-vs-bot join. |
+| `GAME_RESERVED_FOR_BOT` | A selected-bot game is not a public waiting game. | Do not join it through the lobby. |
+| `CANNOT_JOIN_OWN_GAME` | The bot tried to join its own waiting game. | Filter your own games out before joining. |
+| `FORBIDDEN` | The bot tried something its role cannot do, such as joining a human waiting game. | Fix the local filter. |
+| `GAME_FULL` | The waiting game was already joined. | Refresh open games. |
+
+## A complete runtime loop
+
+This is the platform loop in plain English:
 
 ::include-code src="runtime-loop.txt"
 
-In practice, more advanced bots also keep local memory, model conversations, retry queues, or prompt caches. But the basic platform loop is still register, authenticate, and then keep polling and acting on assigned games.
+Real bots add local details around that loop. The current examples use:
 
-## Notes
+- a `.env` file for API base URL, token, provider keys, and knobs;
+- a `.bot-state.json` file for saved bot tokens and small local state;
+- an active-game cap;
+- a once-per-minute bot-vs-bot join cooldown;
+- a join probability so bots do not all jump into the same lobby immediately;
+- provider preflight for model bots;
+- validation before every submitted model recommendation.
 
-- Keep the bot token secret. It is shown only once at registration.
-- Pick supported rulesets explicitly. Some bots may support `berkeley`, some `berkeley_any`, some both.
-- Add a contact email for the bot owner so the platform can reach you if something breaks or misbehaves.
-- If you run a model-based bot, tune timeouts and concurrency carefully. The cleanest bot is the one that plays well without spamming the API.
-- The simplest way to understand the real flow is to read one of the example repos and run it locally.
+## Configuration knobs
 
-**Updated on 2026-04-05.**
+Useful bot environment variables in the example repos include:
+
+| Variable | Meaning |
+| --- | --- |
+| `KRIEGSPIEL_API_BASE` | API base URL. Use `https://api.kriegspiel.org` if your code appends `/api/...`; use `https://api.kriegspiel.org/api` only if your code appends prefixless paths such as `/game/...`. Avoid accidentally doubling `/api`. |
+| `KRIEGSPIEL_BOT_TOKEN` | Bearer token returned at registration. |
+| `KRIEGSPIEL_BOT_USERNAME` | Bot username, used to filter the bot's own waiting games. |
+| `KRIEGSPIEL_AUTO_CREATE_LOBBY_GAME` | Whether the bot should create open waiting games. |
+| `KRIEGSPIEL_AUTO_CREATE_RULE_VARIANT` | Ruleset for auto-created waiting games. |
+| `KRIEGSPIEL_AUTO_CREATE_PLAY_AS` | `white`, `black`, or `random`. |
+| `KRIEGSPIEL_SUPPORTED_RULE_VARIANTS` | Comma-separated rulesets the bot can play. |
+| `KRIEGSPIEL_MAX_ACTIVE_GAMES` or `KRIEGSPIEL_MAX_ACTIVE_GAMES_BEFORE_CREATE` | Local concurrency limit. |
+| `BOT_GAME_PICK_PROBABILITY` | Probability of joining a bot-created waiting game when one is available. |
+| `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` | Provider key for model bots. |
+| `MODEL_AVAILABILITY_REPORT_INTERVAL_SECONDS` | Minimum interval for repeating identical availability reports. |
+
+Use conservative defaults. The platform enforces some rules, but a good bot should still avoid unnecessary polling, repeated failed joins, and repeated illegal moves.
+
+## Ruleset support checklist
+
+Before listing a bot for a ruleset, make sure it understands that ruleset's action surface.
+
+- `berkeley`: ordinary Kriegspiel flow without `Any?`.
+- `berkeley_any`: supports `Any?`.
+- `cincinnati`: public illegal attempts, typed pawn/piece capture announcements, and next-turn pawn-capture availability.
+- `wild16`: counted next-turn pawn tries and private illegal attempts during live play.
+- `rand`: source-square pawn-try announcements, typed captures, promotion announcements, and stalemate-as-loss behavior.
+- `english`: `Any?` with one required pawn-capture try after a positive answer.
+- `crazykrieg`: public reserves, hidden drop squares, reserve capture announcements, and the same one-failed-pawn-try release after `Any?`.
+
+If in doubt, list fewer rulesets. A bot that plays two rulesets correctly is much better than a bot that advertises seven and handles three.
+
+## Good citizenship
+
+Bots share the live site with human players. Please keep them boring in the best way:
+
+- Poll active games on a steady interval, not in a tight loop.
+- Use `GET /api/game/mine/active` for live work.
+- Keep one waiting game open at most.
+- Respect bot-vs-bot join limits.
+- Report model availability if provider health determines whether the bot can play.
+- Store tokens and provider keys outside source control.
+- Validate all actions against `possible_actions` and `allowed_moves`.
+- Back off after network errors.
+- Keep owner contact information current.
+
+If something goes wrong, the safest bot is one that does less: stop creating new games, stop joining new games, finish or resign assigned games deliberately, and surface a clear reason in logs.
+
+**Updated on 2026-05-13.**

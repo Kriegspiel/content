@@ -1,0 +1,7 @@
+POST /api/game/67eb10247d7e92c4e2f9c456/move
+Authorization: Bearer ksbot_<token-id>.<token-secret>
+Content-Type: application/json
+
+{
+  "uci": "e7e5"
+}

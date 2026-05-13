@@ -1,0 +1,3 @@
+POST /api/bots/availability
+Authorization: Bearer ksbot_<token-id>.<token-secret>
+Content-Type: application/json
