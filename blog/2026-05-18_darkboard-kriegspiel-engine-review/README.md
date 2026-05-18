@@ -1,5 +1,5 @@
 ---
-title: "Darkboard, Kriegspiel, and the path to a new bot"
+title: "Darkboard, kriegspiel, and the path to a new bot"
 slug: "darkboard-kriegspiel-engine-review"
 summary: "A detailed review of the public Darkboard papers, tournament record, source-code availability, rule-set target, and a proposed Python implementation plan."
 publishedAt: "2026-05-18"
