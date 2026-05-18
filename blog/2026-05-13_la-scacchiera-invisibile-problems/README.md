@@ -424,11 +424,7 @@ Solution: `1.Rb5`. Non-silent: `2.Kxb5#` after `cxb5`, or `2.Re5#` after `Nxc7`.
 
 Diagram FEN: `4R2B/Q2R1r2/1b6/1K1Nr3/nP1k2n1/1P1p1B2/3P4/8 w - - 0 1`
 
-Solution: `1.Rc8`.
-
-Eastern rules: non-silent, `2.dxc3#` after `Nc3`, or `2.Rc4#` after `Rxf3`, `Rxd7`, or `Bxa7`. If `Any?` is "Yes," `2.dxe3#` after `Ne3`, `sor 2.Qa1#` after `Nc5`, `sor 2.Rc4#` after `Rf6`, `Rg7`, `Nf6`, `Nf2`, `Nh2`, or `Nh6`, `sor 2.Ne7#` after `Bc5`. If `Any?` is "No," `2.Qxb6#` after `Nb2`.
-
-Western rules: with zero possible captures, `2.Qxb6#` after `Nb2`; with one possible capture, `2.dxc3#` after `Nc3`, or `2.Rxd5#` after `Rxd5`, or `2.Qa1#` after `Nc5`, `sor 2.Rc4#` after `Rxf3`, `Rxd7`, `Rf6`, `Rg7`, `Nf6`, `Nf2`, `Nh2`, or `Nh6`; with two possible captures, `2.dxe3#` after `Ne3`, `sor 2.Ne7#` after `Bc5`.
+Solution: `1.Rc8`. The Eastern and Western rule continuations are both part of the solution. Under Eastern rules, the non-silent continuations are `2.dxc3#` after `Nc3`, or `2.Rc4#` after `Rxf3`, `Rxd7`, or `Bxa7`. If `Any?` is "Yes," `2.dxe3#` after `Ne3`, `sor 2.Qa1#` after `Nc5`, `sor 2.Rc4#` after `Rf6`, `Rg7`, `Nf6`, `Nf2`, `Nh2`, or `Nh6`, `sor 2.Ne7#` after `Bc5`. If `Any?` is "No," `2.Qxb6#` after `Nb2`. Under Western rules, with zero possible captures, `2.Qxb6#` follows `Nb2`; with one possible capture, `2.dxc3#` after `Nc3`, or `2.Rxd5#` after `Rxd5`, or `2.Qa1#` after `Nc5`, `sor 2.Rc4#` after `Rxf3`, `Rxd7`, `Rf6`, `Rg7`, `Nf6`, `Nf2`, `Nh2`, or `Nh6`; with two possible captures, `2.dxe3#` after `Ne3`, `sor 2.Ne7#` after `Bc5`.
 
 ### 7.2.4 - Swart 1204
 
