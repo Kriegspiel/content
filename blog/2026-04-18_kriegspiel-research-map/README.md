@@ -3,7 +3,7 @@ title: "A research map of Kriegspiel"
 slug: "kriegspiel-research-map"
 summary: "A compact guide to public Kriegspiel research, key papers, and the academic history around the game."
 publishedAt: "2026-04-18"
-updatedAt: "2026-04-18"
+updatedAt: "2026-05-21"
 author: "Kriegspiel Team"
 tags: ["research", "history", "academia"]
 draft: false
@@ -18,9 +18,26 @@ This post is not a complete bibliography of every Kriegspiel paper ever written.
 
 One especially useful secondary index in that search was the Chessprogramming wiki's [KriegSpiel page](https://www.chessprogramming.org/KriegSpiel). The page is no substitute for the primary papers, but it works very well as a cross-check, collecting publication links, Computer Olympiad notes, and wider context such as Henry Michael Temple's 1899 origin story and the ICC / Wild 16 rules line.
 
+## Book-length sources and problem collections
+
+The Kriegspiel bibliography is not only a paper trail. A few books, booklets, and manuscript collections carry parts of the game culture that the AI papers usually treat as background: rules traditions, practical play, composed problems, and endgame technique.
+
+The direct book-length sources are sparse enough to list separately:
+
+| Date | Source | Why it matters |
+| --- | --- | --- |
+| ca. 1900/1905 | H. Cayley, [Kriegspiel, or, The Chess War Game](https://www.worldcat.org/oclc/40577938) | An early dedicated booklet from the game's first public era. The exact catalogue date varies, but it belongs in the origin trail around Temple's English chess variant. |
+| 1958/1959 | Gerald Frank Anderson, [Are There Any? A Chess Problem Book](https://www.worldcat.org/oclc/4426185) | The key book-length source for the English problem tradition and the "Are there any?" rules culture. |
+| 1987 | Lloyd S. Shapley, [The Invisible Chessboard](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) | An unpublished manuscript and problem collection rather than a commercial book, but central to the RAND/UCLA line. |
+| 1994 | David H. Li, [Kriegspiel: Chess Under Uncertainty](https://www.worldcat.org/oclc/30382902) | The main modern English-language book devoted to Kriegspiel as a playable chess variant. |
+| 1995 | David H. Li, [Chess Detective: Kriegspiel Strategies, Endgames and Problems](https://www.worldcat.org/oclc/32819468) | A companion volume focused on deduction, strategy, endgames, and problems. |
+| 2004 | Paolo Ciancarini, [La Scacchiera Invisibile](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/scacchierainvisibile.pdf) | A book manuscript that connects the Bologna research line with rules history and a large problem collection. |
+
+That list is deliberately narrower than the reference lists in some AI papers. Bridge, poker, Scrabble, and other imperfect-information game papers can be useful methodological context, but they are not Kriegspiel books and do not belong in the core book map.
+
 ## Before Bologna and Berkeley: Anderson and the English problem tradition
 
-There is also an earlier book-length source that deserves separate mention: Gerald Frank Anderson's [Are There Any? A Chess Problem Book](https://www.worldcat.org/oclc/4426185).
+Anderson deserves a separate stop because [*Are There Any? A Chess Problem Book*](https://www.worldcat.org/oclc/4426185) is not just a bibliographic curiosity.
 
 The book does not belong to the later Bologna or Berkeley AI lines. Instead, it belongs to an older English Kriegspiel problem tradition, centered more on composed problems and referee logic than on modern search algorithms. That difference is exactly what makes the source valuable.
 
@@ -143,14 +160,15 @@ Bologna represents the broadest sustained program in the public record: represen
 A workable reading order is:
 
 1. Begin with Anderson's *Are There Any?* for the older English problem-book tradition.
-2. Read Ferguson's [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf) for the UCLA mathematical line.
-3. Read Shapley's [The Invisible Chessboard](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) and Ferguson's [Shapley note](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) for the RAND/UCLA bridge.
-4. Read the Sakuta-Iida line, starting with [Solving Kriegspiel-Like Problems: Examining Efficient Search Methods](https://link.springer.com/chapter/10.1007/3-540-45579-5_4).
-5. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
-6. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
-7. Read Parker, Nau, and Subrahmanian's [Game-Tree Search with Combinatorially Large Belief States](https://www.cs.umd.edu/~nau/papers/parker2005game-tree.pdf).
-8. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
-9. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
-10. Keep the Chessprogramming wiki's [KriegSpiel page](https://www.chessprogramming.org/KriegSpiel) open as a secondary index while reading. The page fills in the Sakuta-Iida line, the Parker-Nau line, and the Olympiad record around Darkboard.
+2. Add David H. Li's *Kriegspiel: Chess Under Uncertainty* and *Chess Detective* for modern practical play, strategy, endgames, and problems.
+3. Read Ferguson's [Mate with bishop and knight in kriegspiel](https://www.math.ucla.edu/~tom/papers/ks.pdf) for the UCLA mathematical line.
+4. Read Shapley's [The Invisible Chessboard](https://harlowshapley.org/s/Kriegspiel-rules-and-Lloyd-Shapley-demo.pdf) and Ferguson's [Shapley note](https://www.math.ucla.edu/~tom/papers/unpublished/kriegshap.pdf) for the RAND/UCLA bridge.
+5. Read the Sakuta-Iida line, starting with [Solving Kriegspiel-Like Problems: Examining Efficient Search Methods](https://link.springer.com/chapter/10.1007/3-540-45579-5_4).
+6. Read Ciancarini's [Kriegspiel page](https://www.cs.unibo.it/~paolo.ciancarini/wwwpages/chesssite/kriegspiel/kriegspiel.html) to see the Bologna arc in one place.
+7. Read Favini's [doctoral thesis](https://amsdottorato.unibo.it/id/eprint/2403/1/favini_gianpiero_tesi.pdf) for the strongest single Bologna document.
+8. Read Parker, Nau, and Subrahmanian's [Game-Tree Search with Combinatorially Large Belief States](https://www.cs.umd.edu/~nau/papers/parker2005game-tree.pdf).
+9. Read Russell and Wolfe's [IJCAI 2005 paper](https://people.eecs.berkeley.edu/~russell/papers/ijcai05-krieg.pdf).
+10. Then read Wolfe and Russell's [2007 workshop paper](https://w01fe.com/berkeley/pubs/07-icaps_games-graph.pdf).
+11. Keep the Chessprogramming wiki's [KriegSpiel page](https://www.chessprogramming.org/KriegSpiel) open as a secondary index while reading. The page fills in the Sakuta-Iida line, the Parker-Nau line, and the Olympiad record around Darkboard.
 
 That sequence brings one broad research tradition and one especially clean belief-state tradition into view, a strong starting map for modern Kriegspiel software work.
